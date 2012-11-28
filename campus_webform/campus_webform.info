@@ -1,0 +1,13 @@
+name = Campus Webform
+description = Create campus webform
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = campus_webform
+features[content][] = giving_time
+features[content][] = iconnect_groups
+features[content][] = international_ministries
+features[content][] = join_group
+features[content][] = ministry_connect_form
+features[content][] = prayer_fasting
+features[features_api][] = api:1
