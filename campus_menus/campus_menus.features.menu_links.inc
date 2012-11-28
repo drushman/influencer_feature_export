@@ -15,7 +15,7 @@ function campus_menus_menu_default_menu_links() {
     'menu_name' => 'main-menu',
     'link_path' => '<front>',
     'router_path' => '',
-    'link_title' => 'Campuses',
+    'link_title' => 'Highlights',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -24,9 +24,10 @@ function campus_menus_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => '0',
     'external' => '1',
-    'has_children' => '1',
-    'expanded' => '1',
-    'weight' => '-48',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-49',
+    'parent_path' => 'admin/structure',
   );
   // Exported menu link: main-menu:about-ash-jane
   $menu_links['main-menu:about-ash-jane'] = array(
@@ -45,7 +46,79 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-50',
-    'parent_path' => '<front>',
+    'parent_path' => 'admin/content',
+  );
+  // Exported menu link: main-menu:admin/appearance
+  $menu_links['main-menu:admin/appearance'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'admin/appearance',
+    'router_path' => 'admin/appearance',
+    'link_title' => 'Campuses',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-48',
+  );
+  // Exported menu link: main-menu:admin/content
+  $menu_links['main-menu:admin/content'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'admin/content',
+    'router_path' => 'admin/content',
+    'link_title' => 'About',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-49',
+  );
+  // Exported menu link: main-menu:admin/structure
+  $menu_links['main-menu:admin/structure'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'admin/structure',
+    'router_path' => 'admin/structure',
+    'link_title' => 'TV',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-44',
+  );
+  // Exported menu link: main-menu:admin/structure/menu
+  $menu_links['main-menu:admin/structure/menu'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'admin/structure/menu',
+    'router_path' => 'admin/structure/menu',
+    'link_title' => 'Church Life',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-47',
   );
   // Exported menu link: main-menu:campus
   $menu_links['main-menu:campus'] = array(
@@ -64,7 +137,7 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '0',
-    'parent_path' => '<front>',
+    'parent_path' => 'admin/structure/menu',
   );
   // Exported menu link: main-menu:concierge
   $menu_links['main-menu:concierge'] = array(
@@ -83,7 +156,7 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '0',
-    'parent_path' => '<front>',
+    'parent_path' => 'node/add',
   );
   // Exported menu link: main-menu:devotions_online
   $menu_links['main-menu:devotions_online'] = array(
@@ -102,7 +175,7 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-49',
-    'parent_path' => '<front>',
+    'parent_path' => 'user',
   );
   // Exported menu link: main-menu:events
   $menu_links['main-menu:events'] = array(
@@ -118,17 +191,17 @@ function campus_menus_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
-    'has_children' => '1',
+    'has_children' => '0',
     'expanded' => '0',
     'weight' => '-48',
-    'parent_path' => '<front>',
+    'parent_path' => 'admin/appearance',
   );
   // Exported menu link: main-menu:give
   $menu_links['main-menu:give'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'give',
     'router_path' => 'give',
-    'link_title' => 'Give',
+    'link_title' => 'Giving',
     'options' => array(
       'attributes' => array(
         'title' => '',
@@ -137,9 +210,10 @@ function campus_menus_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
-    'has_children' => '1',
+    'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
+    'weight' => '0',
+    'parent_path' => 'user',
   );
   // Exported menu link: main-menu:group
   $menu_links['main-menu:group'] = array(
@@ -158,7 +232,7 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-50',
-    'parent_path' => '<front>',
+    'parent_path' => 'admin/structure/menu',
   );
   // Exported menu link: main-menu:influencers_live
   $menu_links['main-menu:influencers_live'] = array(
@@ -176,8 +250,8 @@ function campus_menus_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
-    'parent_path' => '<front>',
+    'weight' => '-50',
+    'parent_path' => 'admin/structure',
   );
   // Exported menu link: main-menu:location
   $menu_links['main-menu:location'] = array(
@@ -196,7 +270,25 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-50',
-    'parent_path' => '<front>',
+    'parent_path' => 'admin/appearance',
+  );
+  // Exported menu link: main-menu:node/add
+  $menu_links['main-menu:node/add'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'node/add',
+    'router_path' => 'node/add',
+    'link_title' => 'Contact',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-43',
   );
   // Exported menu link: main-menu:podcasts
   $menu_links['main-menu:podcasts'] = array(
@@ -215,7 +307,7 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-50',
-    'parent_path' => '<front>',
+    'parent_path' => 'user',
   );
   // Exported menu link: main-menu:services
   $menu_links['main-menu:services'] = array(
@@ -234,7 +326,7 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-49',
-    'parent_path' => '<front>',
+    'parent_path' => 'admin/appearance',
   );
   // Exported menu link: main-menu:store
   $menu_links['main-menu:store'] = array(
@@ -253,7 +345,7 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-48',
-    'parent_path' => '<front>',
+    'parent_path' => 'user',
   );
   // Exported menu link: main-menu:team
   $menu_links['main-menu:team'] = array(
@@ -273,6 +365,24 @@ function campus_menus_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-48',
     'parent_path' => 'about',
+  );
+  // Exported menu link: main-menu:user
+  $menu_links['main-menu:user'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'user',
+    'router_path' => 'user',
+    'link_title' => 'Give',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '0',
+    'weight' => '-46',
   );
   // Exported menu link: main-menu:vision
   $menu_links['main-menu:vision'] = array(
@@ -703,6 +813,42 @@ function campus_menus_menu_default_menu_links() {
     'expanded' => '1',
     'weight' => '-50',
   );
+  // Exported menu link: menu-new-influencer:i-am-new
+  $menu_links['menu-new-influencer:i-am-new'] = array(
+    'menu_name' => 'menu-new-influencer',
+    'link_path' => 'i-am-new',
+    'router_path' => 'i-am-new',
+    'link_title' => 'I\'m new',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-50',
+  );
+  // Exported menu link: menu-new-influencer:influencer
+  $menu_links['menu-new-influencer:influencer'] = array(
+    'menu_name' => 'menu-new-influencer',
+    'link_path' => 'influencer',
+    'router_path' => 'influencer',
+    'link_title' => 'Be an Influencer',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-49',
+  );
   // Exported menu link: menu-social-network-link:<front>
   $menu_links['menu-social-network-link:<front>'] = array(
     'menu_name' => 'menu-social-network-link',
@@ -720,7 +866,6 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-50',
-    'parent_path' => '<front>',
   );
   // Exported menu link: menu-social-network-link:http://vimeo.com/
   $menu_links['menu-social-network-link:http://vimeo.com/'] = array(
@@ -739,7 +884,6 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-48',
-    'parent_path' => '<front>',
   );
   // Exported menu link: menu-social-network-link:rss.xml
   $menu_links['menu-social-network-link:rss.xml'] = array(
@@ -758,57 +902,28 @@ function campus_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-47',
-    'parent_path' => '<front>',
-  );
-  // Exported menu link: user-menu:user
-  $menu_links['user-menu:user'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'user',
-    'router_path' => 'user',
-    'link_title' => 'Account Settings',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'system',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-10',
-  );
-  // Exported menu link: user-menu:user/logout
-  $menu_links['user-menu:user/logout'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'user/logout',
-    'router_path' => 'user/logout',
-    'link_title' => 'Log out',
-    'options' => array(),
-    'module' => 'system',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '10',
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Account Settings');
+  t('About');
   t('Australia');
+  t('Be an Influencer');
   t('Campuses');
+  t('Church Life');
   t('Concierge');
+  t('Contact');
   t('Content');
   t('Dashboard');
   t('Devotions Online');
   t('Events');
   t('Facebook');
   t('Give');
+  t('Giving');
   t('Groups');
+  t('Highlights');
+  t('I\'m new');
   t('Influencers Live');
   t('Location');
-  t('Log out');
   t('Ministries');
   t('Onling Giving');
   t('Paradise Album');
@@ -821,6 +936,7 @@ function campus_menus_menu_default_menu_links() {
   t('Services');
   t('Site settings');
   t('Store');
+  t('TV');
   t('Team');
   t('Vimeo');
   t('Vision');

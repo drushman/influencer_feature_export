@@ -40,29 +40,29 @@ function campus_menus_menu_default_menu_custom() {
     'title' => 'Influncer Campus',
     'description' => '',
   );
+  // Exported menu: menu-new-influencer.
+  $menus['menu-new-influencer'] = array(
+    'menu_name' => 'menu-new-influencer',
+    'title' => 'New Influencer',
+    'description' => 'Display 2 link "Im new" and "Be a Influencer" at campus site header block',
+  );
   // Exported menu: menu-social-network-link.
   $menus['menu-social-network-link'] = array(
     'menu_name' => 'menu-social-network-link',
     'title' => 'Social network link',
     'description' => '',
   );
-  // Exported menu: user-menu.
-  $menus['user-menu'] = array(
-    'menu_name' => 'user-menu',
-    'title' => 'User menu',
-    'description' => 'The <em>User</em> menu contains links related to the user\'s account, as well as the \'Log out\' link.',
-  );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Display 2 link "Im new" and "Be a Influencer" at campus site header block');
   t('Footer menu');
   t('Fresh Dashboard');
   t('Homepage news box');
   t('Influncer Campus');
   t('Main menu');
+  t('New Influencer');
   t('Social network link');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
-  t('The <em>User</em> menu contains links related to the user\'s account, as well as the \'Log out\' link.');
-  t('User menu');
 
 
   return $menus;
