@@ -1,0 +1,13 @@
+name = Campus Roles
+description = Create roles
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = campus_roles
+dependencies[] = features
+features[features_api][] = api:1
+features[user_role][] = adelaide
+features[user_role][] = administrator
+features[user_role][] = content
+features[user_role][] = global
+features[user_role][] = moderator

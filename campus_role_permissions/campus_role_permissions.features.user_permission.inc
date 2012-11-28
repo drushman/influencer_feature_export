@@ -82,15 +82,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'contextual',
   );
 
-  // Exported permission: access dashboard.
-  $permissions['access dashboard'] = array(
-    'name' => 'access dashboard',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'dashboard',
-  );
-
   // Exported permission: access devel information.
   $permissions['access devel information'] = array(
     'name' => 'access devel information',
@@ -161,15 +152,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: access webform share functionality.
-  $permissions['access webform share functionality'] = array(
-    'name' => 'access webform share functionality',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'webform_share',
-  );
-
   // Exported permission: add media from remote sources.
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
@@ -216,15 +198,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'chart',
   );
 
-  // Exported permission: administer ckeditor.
-  $permissions['administer ckeditor'] = array(
-    'name' => 'administer ckeditor',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'ckeditor',
-  );
-
   // Exported permission: administer consumers.
   $permissions['administer consumers'] = array(
     'name' => 'administer consumers',
@@ -259,15 +232,6 @@ function campus_role_permissions_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'features',
-  );
-
-  // Exported permission: administer feeds.
-  $permissions['administer feeds'] = array(
-    'name' => 'administer feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
   );
 
   // Exported permission: administer fieldable panels panes.
@@ -562,15 +526,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: administer uuid.
-  $permissions['administer uuid'] = array(
-    'name' => 'administer uuid',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'uuid',
-  );
-
   // Exported permission: administer vietcoop dashboard.
   $permissions['administer vietcoop dashboard'] = array(
     'name' => 'administer vietcoop dashboard',
@@ -588,15 +543,6 @@ function campus_role_permissions_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'views',
-  );
-
-  // Exported permission: allow CKFinder file uploads.
-  $permissions['allow CKFinder file uploads'] = array(
-    'name' => 'allow CKFinder file uploads',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'ckeditor',
   );
 
   // Exported permission: assign node themes.
@@ -674,57 +620,12 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: clear feed feeds.
-  $permissions['clear feed feeds'] = array(
-    'name' => 'clear feed feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: clear node feeds.
-  $permissions['clear node feeds'] = array(
-    'name' => 'clear node feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: clear opml feeds.
-  $permissions['clear opml feeds'] = array(
-    'name' => 'clear opml feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: clear user feeds.
-  $permissions['clear user feeds'] = array(
-    'name' => 'clear user feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: create article content.
   $permissions['create article content'] = array(
     'name' => 'create article content',
     'roles' => array(
       0 => 'administrator',
       1 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: create blog content.
-  $permissions['create blog content'] = array(
-    'name' => 'create blog content',
-    'roles' => array(
-      0 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -847,15 +748,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: customize ckeditor.
-  $permissions['customize ckeditor'] = array(
-    'name' => 'customize ckeditor',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'ckeditor',
-  );
-
   // Exported permission: customize shortcut links.
   $permissions['customize shortcut links'] = array(
     'name' => 'customize shortcut links',
@@ -882,15 +774,6 @@ function campus_role_permissions_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete any blog content.
-  $permissions['delete any blog content'] = array(
-    'name' => 'delete any blog content',
-    'roles' => array(
-      0 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -1010,15 +893,6 @@ function campus_role_permissions_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own blog content.
-  $permissions['delete own blog content'] = array(
-    'name' => 'delete own blog content',
-    'roles' => array(
-      0 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -1193,15 +1067,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any blog content.
-  $permissions['edit any blog content'] = array(
-    'name' => 'edit any blog content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit any college content.
   $permissions['edit any college content'] = array(
     'name' => 'edit any college content',
@@ -1364,15 +1229,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own blog content.
-  $permissions['edit own blog content'] = array(
-    'name' => 'edit own blog content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit own college content.
   $permissions['edit own college content'] = array(
     'name' => 'edit own college content',
@@ -1514,24 +1370,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'devel',
   );
 
-  // Exported permission: export nodes.
-  $permissions['export nodes'] = array(
-    'name' => 'export nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node_export',
-  );
-
-  // Exported permission: export own nodes.
-  $permissions['export own nodes'] = array(
-    'name' => 'export own nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node_export',
-  );
-
   // Exported permission: flush caches.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
@@ -1542,15 +1380,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
-  // Exported permission: import feed feeds.
-  $permissions['import feed feeds'] = array(
-    'name' => 'import feed feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: import media.
   $permissions['import media'] = array(
     'name' => 'import media',
@@ -1559,33 +1388,6 @@ function campus_role_permissions_user_default_permissions() {
       1 => 'moderator',
     ),
     'module' => 'media',
-  );
-
-  // Exported permission: import node feeds.
-  $permissions['import node feeds'] = array(
-    'name' => 'import node feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: import opml feeds.
-  $permissions['import opml feeds'] = array(
-    'name' => 'import opml feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: import user feeds.
-  $permissions['import user feeds'] = array(
-    'name' => 'import user feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
   );
 
   // Exported permission: manage features.
@@ -1680,42 +1482,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'devel',
   );
 
-  // Exported permission: unlock feed feeds.
-  $permissions['unlock feed feeds'] = array(
-    'name' => 'unlock feed feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: unlock node feeds.
-  $permissions['unlock node feeds'] = array(
-    'name' => 'unlock node feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: unlock opml feeds.
-  $permissions['unlock opml feeds'] = array(
-    'name' => 'unlock opml feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
-  // Exported permission: unlock user feeds.
-  $permissions['unlock user feeds'] = array(
-    'name' => 'unlock user feeds',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'feeds',
-  );
-
   // Exported permission: use PHP for settings.
   $permissions['use PHP for settings'] = array(
     'name' => 'use PHP for settings',
@@ -1732,15 +1498,6 @@ function campus_role_permissions_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'googleanalytics',
-  );
-
-  // Exported permission: use PHP to import nodes.
-  $permissions['use PHP to import nodes'] = array(
-    'name' => 'use PHP to import nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node_export',
   );
 
   // Exported permission: use advanced search.
