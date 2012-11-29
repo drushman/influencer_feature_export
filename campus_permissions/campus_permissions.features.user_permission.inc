@@ -1,25 +1,14 @@
 <?php
 /**
  * @file
- * campus_role_permissions.features.user_permission.inc
+ * campus_permissions.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function campus_role_permissions_user_default_permissions() {
+function campus_permissions_user_default_permissions() {
   $permissions = array();
-
-  // Exported permission: access administration menu.
-  $permissions['access administration menu'] = array(
-    'name' => 'access administration menu',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'content',
-      2 => 'moderator',
-    ),
-    'module' => 'admin_menu',
-  );
 
   // Exported permission: access administration pages.
   $permissions['access administration pages'] = array(
@@ -80,15 +69,6 @@ function campus_role_permissions_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'contextual',
-  );
-
-  // Exported permission: access devel information.
-  $permissions['access devel information'] = array(
-    'name' => 'access devel information',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'devel',
   );
 
   // Exported permission: access google analytics reports.
@@ -316,15 +296,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'metatag',
   );
 
-  // Exported permission: administer module filter.
-  $permissions['administer module filter'] = array(
-    'name' => 'administer module filter',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'module_filter',
-  );
-
   // Exported permission: administer modules.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
@@ -369,15 +340,6 @@ function campus_role_permissions_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'panels',
-  );
-
-  // Exported permission: administer panel-nodes.
-  $permissions['administer panel-nodes'] = array(
-    'name' => 'administer panel-nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels_node',
   );
 
   // Exported permission: administer panels layouts.
@@ -531,7 +493,6 @@ function campus_role_permissions_user_default_permissions() {
     'name' => 'administer vietcoop dashboard',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
     ),
     'module' => 'vc_admin',
   );
@@ -652,24 +613,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create feed content.
-  $permissions['create feed content'] = array(
-    'name' => 'create feed content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: create feed_item content.
-  $permissions['create feed_item content'] = array(
-    'name' => 'create feed_item content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create fieldable fieldable_panels_pane.
   $permissions['create fieldable fieldable_panels_pane'] = array(
     'name' => 'create fieldable fieldable_panels_pane',
@@ -698,24 +641,6 @@ function campus_role_permissions_user_default_permissions() {
       1 => 'moderator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: create panel content.
-  $permissions['create panel content'] = array(
-    'name' => 'create panel content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: create panel-nodes.
-  $permissions['create panel-nodes'] = array(
-    'name' => 'create panel-nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels_node',
   );
 
   // Exported permission: create url aliases.
@@ -800,24 +725,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any feed content.
-  $permissions['delete any feed content'] = array(
-    'name' => 'delete any feed content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete any feed_item content.
-  $permissions['delete any feed_item content'] = array(
-    'name' => 'delete any feed_item content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete any ministry content.
   $permissions['delete any ministry content'] = array(
     'name' => 'delete any ministry content',
@@ -837,24 +744,6 @@ function campus_role_permissions_user_default_permissions() {
       1 => 'moderator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: delete any panel content.
-  $permissions['delete any panel content'] = array(
-    'name' => 'delete any panel content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete any panel-nodes.
-  $permissions['delete any panel-nodes'] = array(
-    'name' => 'delete any panel-nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels_node',
   );
 
   // Exported permission: delete any video content.
@@ -919,24 +808,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own feed content.
-  $permissions['delete own feed content'] = array(
-    'name' => 'delete own feed content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own feed_item content.
-  $permissions['delete own feed_item content'] = array(
-    'name' => 'delete own feed_item content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete own ministry content.
   $permissions['delete own ministry content'] = array(
     'name' => 'delete own ministry content',
@@ -956,24 +827,6 @@ function campus_role_permissions_user_default_permissions() {
       1 => 'moderator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: delete own panel content.
-  $permissions['delete own panel content'] = array(
-    'name' => 'delete own panel content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own panel-nodes.
-  $permissions['delete own panel-nodes'] = array(
-    'name' => 'delete own panel-nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels_node',
   );
 
   // Exported permission: delete own video content.
@@ -1027,13 +880,18 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: display drupal links.
-  $permissions['display drupal links'] = array(
-    'name' => 'display drupal links',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'admin_menu',
+  // Exported permission: delete terms in 4.
+  $permissions['delete terms in 4'] = array(
+    'name' => 'delete terms in 4',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 6.
+  $permissions['delete terms in 6'] = array(
+    'name' => 'delete terms in 6',
+    'roles' => array(),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: edit all webform submissions.
@@ -1089,24 +947,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any feed content.
-  $permissions['edit any feed content'] = array(
-    'name' => 'edit any feed content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit any feed_item content.
-  $permissions['edit any feed_item content'] = array(
-    'name' => 'edit any feed_item content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit any global_leadership profile.
   $permissions['edit any global_leadership profile'] = array(
     'name' => 'edit any global_leadership profile',
@@ -1136,24 +976,6 @@ function campus_role_permissions_user_default_permissions() {
       1 => 'moderator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: edit any panel content.
-  $permissions['edit any panel content'] = array(
-    'name' => 'edit any panel content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit any panel-nodes.
-  $permissions['edit any panel-nodes'] = array(
-    'name' => 'edit any panel-nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels_node',
   );
 
   // Exported permission: edit any video content.
@@ -1208,6 +1030,15 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'metatag',
   );
 
+  // Exported permission: edit node machine name.
+  $permissions['edit node machine name'] = array(
+    'name' => 'edit node machine name',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'defaultcontent',
+  );
+
   // Exported permission: edit own adelaide_leadership profile.
   $permissions['edit own adelaide_leadership profile'] = array(
     'name' => 'edit own adelaide_leadership profile',
@@ -1251,24 +1082,6 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own feed content.
-  $permissions['edit own feed content'] = array(
-    'name' => 'edit own feed content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own feed_item content.
-  $permissions['edit own feed_item content'] = array(
-    'name' => 'edit own feed_item content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit own global_leadership profile.
   $permissions['edit own global_leadership profile'] = array(
     'name' => 'edit own global_leadership profile',
@@ -1299,24 +1112,6 @@ function campus_role_permissions_user_default_permissions() {
       1 => 'moderator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: edit own panel content.
-  $permissions['edit own panel content'] = array(
-    'name' => 'edit own panel content',
-    'roles' => array(
-      0 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own panel-nodes.
-  $permissions['edit own panel-nodes'] = array(
-    'name' => 'edit own panel-nodes',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'panels_node',
   );
 
   // Exported permission: edit own video content.
@@ -1361,23 +1156,18 @@ function campus_role_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: execute php code.
-  $permissions['execute php code'] = array(
-    'name' => 'execute php code',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'devel',
+  // Exported permission: edit terms in 4.
+  $permissions['edit terms in 4'] = array(
+    'name' => 'edit terms in 4',
+    'roles' => array(),
+    'module' => 'taxonomy',
   );
 
-  // Exported permission: flush caches.
-  $permissions['flush caches'] = array(
-    'name' => 'flush caches',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'moderator',
-    ),
-    'module' => 'admin_menu',
+  // Exported permission: edit terms in 6.
+  $permissions['edit terms in 6'] = array(
+    'name' => 'edit terms in 6',
+    'roles' => array(),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: import media.
@@ -1471,15 +1261,6 @@ function campus_role_permissions_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'shortcut',
-  );
-
-  // Exported permission: switch users.
-  $permissions['switch users'] = array(
-    'name' => 'switch users',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'devel',
   );
 
   // Exported permission: use PHP for settings.

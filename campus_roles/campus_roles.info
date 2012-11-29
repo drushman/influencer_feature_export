@@ -1,8 +1,8 @@
 name = Campus Roles
-description = Create roles
+description = User Roles
 core = 7.x
-package = Features
-version = 7.x-1.0
+package = Campus Features
+version = 7.x-3.0
 project = campus_roles
 dependencies[] = features
 features[features_api][] = api:1

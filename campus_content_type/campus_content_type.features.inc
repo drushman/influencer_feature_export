@@ -51,14 +51,30 @@ function campus_content_type_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'webform' => array(
-      'name' => t('Webform'),
-      'base' => 'node_content',
-      'description' => t('Create a new form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
   );
+  return $items;
+}
+
+/**
+ * Implements hook_default_profile2_type().
+ */
+function campus_content_type_default_profile2_type() {
+  $items = array();
+  $items['adelaide_leadership'] = entity_import('profile2_type', '{
+    "userCategory" : true,
+    "userView" : true,
+    "type" : "adelaide_leadership",
+    "label" : "Adelaide Leadership",
+    "weight" : "0",
+    "data" : { "registration" : 0, "use_page" : 0 }
+  }');
+  $items['global_leadership'] = entity_import('profile2_type', '{
+    "userCategory" : true,
+    "userView" : true,
+    "type" : "global_leadership",
+    "label" : "Global Leadership",
+    "weight" : "0",
+    "data" : { "registration" : 0, "use_page" : 0 }
+  }');
   return $items;
 }

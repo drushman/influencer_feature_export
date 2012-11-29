@@ -1,8 +1,8 @@
 name = Campus Themekey Settings
-description = Themekey settings
+description = Themekey settings for Vc Dashboard and Admintheme
 core = 7.x
-package = Features
-version = 7.x-2.0
+package = Campus Features
+version = 7.x-3.0
 project = campus_themekey_settings
 dependencies[] = themekey
 dependencies[] = themekey_features
