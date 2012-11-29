@@ -581,16 +581,6 @@ function campus_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: create article content.
-  $permissions['create article content'] = array(
-    'name' => 'create article content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create college content.
   $permissions['create college content'] = array(
     'name' => 'create college content',
@@ -693,16 +683,6 @@ function campus_permissions_user_default_permissions() {
     'module' => 'webform',
   );
 
-  // Exported permission: delete any article content.
-  $permissions['delete any article content'] = array(
-    'name' => 'delete any article content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete any college content.
   $permissions['delete any college content'] = array(
     'name' => 'delete any college content',
@@ -774,16 +754,6 @@ function campus_permissions_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'fieldable_panels_panes',
-  );
-
-  // Exported permission: delete own article content.
-  $permissions['delete own article content'] = array(
-    'name' => 'delete own article content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'moderator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: delete own college content.
@@ -871,29 +841,6 @@ function campus_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete terms in 1.
-  $permissions['delete terms in 1'] = array(
-    'name' => 'delete terms in 1',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: delete terms in 4.
-  $permissions['delete terms in 4'] = array(
-    'name' => 'delete terms in 4',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: delete terms in 6.
-  $permissions['delete terms in 6'] = array(
-    'name' => 'delete terms in 6',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: edit all webform submissions.
   $permissions['edit all webform submissions'] = array(
     'name' => 'edit all webform submissions',
@@ -913,16 +860,6 @@ function campus_permissions_user_default_permissions() {
       1 => 'content',
     ),
     'module' => 'profile2',
-  );
-
-  // Exported permission: edit any article content.
-  $permissions['edit any article content'] = array(
-    'name' => 'edit any article content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'moderator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: edit any college content.
@@ -1050,16 +987,6 @@ function campus_permissions_user_default_permissions() {
     'module' => 'profile2',
   );
 
-  // Exported permission: edit own article content.
-  $permissions['edit own article content'] = array(
-    'name' => 'edit own article content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'moderator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit own college content.
   $permissions['edit own college content'] = array(
     'name' => 'edit own college content',
@@ -1145,29 +1072,6 @@ function campus_permissions_user_default_permissions() {
       2 => 'moderator',
     ),
     'module' => 'webform',
-  );
-
-  // Exported permission: edit terms in 1.
-  $permissions['edit terms in 1'] = array(
-    'name' => 'edit terms in 1',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: edit terms in 4.
-  $permissions['edit terms in 4'] = array(
-    'name' => 'edit terms in 4',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: edit terms in 6.
-  $permissions['edit terms in 6'] = array(
-    'name' => 'edit terms in 6',
-    'roles' => array(),
-    'module' => 'taxonomy',
   );
 
   // Exported permission: import media.
