@@ -484,34 +484,6 @@ function campus_default_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'file_default_scheme';
-  $strongarm->value = 'public';
-  $export['file_default_scheme'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'file_private_path';
-  $strongarm->value = '';
-  $export['file_private_path'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'file_public_path';
-  $strongarm->value = 'sites/default/files';
-  $export['file_public_path'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'file_temporary_path';
-  $strongarm->value = 'tmp';
-  $export['file_temporary_path'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'filter_fallback_format';
   $strongarm->value = 'plain_text';
   $export['filter_fallback_format'] = $strongarm;
@@ -1220,6 +1192,8 @@ user/*/*';
     10 => 'menu-influncer-campus',
     12 => 'menu-new-influencer',
     13 => 'menu-global-campus',
+    14 => 'menu-campus-giving-time',
+    15 => 'menu-campus-giving-money',
   );
   $export['menu_default_active_menus'] = $strongarm;
 
@@ -1229,8 +1203,10 @@ user/*/*';
   $strongarm->name = 'menu_expanded';
   $strongarm->value = array(
     0 => 'main-menu',
-    1 => 'menu-footer-menu',
-    2 => 'menu-influncer-campus',
+    1 => 'menu-campus-giving-money',
+    2 => 'menu-campus-giving-time',
+    3 => 'menu-footer-menu',
+    4 => 'menu-influncer-campus',
   );
   $export['menu_expanded'] = $strongarm;
 
