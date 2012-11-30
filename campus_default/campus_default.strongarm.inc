@@ -863,7 +863,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_parent';
-  $strongarm->value = 'menu-footer-menu:723';
+  $strongarm->value = 'main-menu:578';
   $export['menu_block_1_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -919,7 +919,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_2_parent';
-  $strongarm->value = 'main-menu:380';
+  $strongarm->value = 'main-menu:579';
   $export['menu_block_2_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -975,7 +975,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_3_parent';
-  $strongarm->value = 'menu-footer-menu:584';
+  $strongarm->value = 'main-menu:584';
   $export['menu_block_3_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1031,7 +1031,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_4_parent';
-  $strongarm->value = 'main-menu:381';
+  $strongarm->value = 'main-menu:580';
   $export['menu_block_4_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1087,7 +1087,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_5_parent';
-  $strongarm->value = 'main-menu:383';
+  $strongarm->value = 'main-menu:582';
   $export['menu_block_5_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1143,7 +1143,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_6_parent';
-  $strongarm->value = 'main-menu:384';
+  $strongarm->value = 'main-menu:583';
   $export['menu_block_6_parent'] = $strongarm;
 
   $strongarm = new stdClass();
