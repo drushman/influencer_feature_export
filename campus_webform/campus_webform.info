@@ -12,7 +12,6 @@ features[content][] = giving_time_webform
 features[content][] = go_trip_webform
 features[content][] = internship_webform
 features[content][] = join_group_webform
-features[content][] = ministry_connect_form
 features[content][] = ministry_connect_webform
 features[content][] = prayer_fasting_webform
 features[features_api][] = api:1
