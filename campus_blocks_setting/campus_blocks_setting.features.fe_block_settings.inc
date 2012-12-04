@@ -22,6 +22,10 @@ function campus_blocks_setting_default_fe_block_settings() {
       'machine_name' => 'campus_dropdown_menu',
       'module' => 'block',
     ),
+    'block-concierge_message_block' => array(
+      'machine_name' => 'concierge_message_block',
+      'module' => 'block',
+    ),
     'menu-menu-footer-menu' => array(
       'delta' => 'menu-footer-menu',
       'module' => 'menu',
@@ -69,6 +73,10 @@ function campus_blocks_setting_default_fe_block_settings() {
       'delta' => '1',
       'module' => 'superfish',
     ),
+    'superfish-2' => array(
+      'delta' => '2',
+      'module' => 'superfish',
+    ),
     'vc_content-campus_address' => array(
       'delta' => 'campus_address',
       'module' => 'vc_content',
@@ -113,7 +121,8 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -122,6 +131,20 @@ vc/site_settings',
     'title' => 'Dropdown mennu',
     'cache' => -1,
     'machine_name' => 'campus_dropdown_menu',
+  );
+
+  $theme['block-concierge_message_block'] = array(
+    'module' => 'block',
+    'theme' => 'admintheme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'machine_name' => 'concierge_message_block',
   );
 
   $theme['menu-menu-footer-menu'] = array(
@@ -133,7 +156,8 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -184,7 +208,8 @@ user/*',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -289,13 +314,28 @@ concierge',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
 vc/contents
 vc/site_settings',
     'title' => '<none>',
+    'cache' => -1,
+  );
+
+  $theme['superfish-2'] = array(
+    'module' => 'superfish',
+    'delta' => '2',
+    'theme' => 'admintheme',
+    'status' => 0,
+    'weight' => '-15',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
     'cache' => -1,
   );
 
@@ -308,7 +348,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -322,7 +362,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -336,7 +376,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -373,7 +413,8 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -382,6 +423,20 @@ vc/site_settings',
     'title' => 'Dropdown mennu',
     'cache' => -1,
     'machine_name' => 'campus_dropdown_menu',
+  );
+
+  $theme['block-concierge_message_block'] = array(
+    'module' => 'block',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'machine_name' => 'concierge_message_block',
   );
 
   $theme['menu-menu-footer-menu'] = array(
@@ -393,7 +448,8 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -444,7 +500,8 @@ user/*',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -549,13 +606,28 @@ concierge',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
 vc/contents
 vc/site_settings',
     'title' => '<none>',
+    'cache' => -1,
+  );
+
+  $theme['superfish-2'] = array(
+    'module' => 'superfish',
+    'delta' => '2',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
     'cache' => -1,
   );
 
@@ -568,7 +640,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -582,7 +654,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -596,7 +668,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -633,7 +705,8 @@ vc/site_settings',
     'region' => 'menu',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -642,6 +715,20 @@ vc/site_settings',
     'title' => 'Dropdown mennu',
     'cache' => -1,
     'machine_name' => 'campus_dropdown_menu',
+  );
+
+  $theme['block-concierge_message_block'] = array(
+    'module' => 'block',
+    'theme' => 'influencerschurch',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'machine_name' => 'concierge_message_block',
   );
 
   $theme['menu-menu-footer-menu'] = array(
@@ -653,7 +740,8 @@ vc/site_settings',
     'region' => 'footer_first',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -704,7 +792,8 @@ user/*',
     'region' => 'footer_first',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -809,13 +898,28 @@ concierge',
     'region' => 'menu',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
 vc/contents
 vc/site_settings',
     'title' => '<none>',
+    'cache' => -1,
+  );
+
+  $theme['superfish-2'] = array(
+    'module' => 'superfish',
+    'delta' => '2',
+    'theme' => 'influencerschurch',
+    'status' => 0,
+    'weight' => '-26',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
     'cache' => -1,
   );
 
@@ -828,7 +932,7 @@ vc/site_settings',
     'region' => 'user_first',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -842,7 +946,7 @@ vc/site_settings',
     'region' => 'user_second',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -856,7 +960,7 @@ vc/site_settings',
     'region' => 'menu',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -893,7 +997,8 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -902,6 +1007,20 @@ vc/site_settings',
     'title' => 'Dropdown mennu',
     'cache' => -1,
     'machine_name' => 'campus_dropdown_menu',
+  );
+
+  $theme['block-concierge_message_block'] = array(
+    'module' => 'block',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'machine_name' => 'concierge_message_block',
   );
 
   $theme['menu-menu-footer-menu'] = array(
@@ -913,7 +1032,8 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -964,7 +1084,8 @@ user/*',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
@@ -1069,13 +1190,28 @@ concierge',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => 'admin
+    'pages' => 'global_home
+admin
 admin/*
 user/*/edit
 vc/dashboard
 vc/contents
 vc/site_settings',
     'title' => '<none>',
+    'cache' => -1,
+  );
+
+  $theme['superfish-2'] = array(
+    'module' => 'superfish',
+    'delta' => '2',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
     'cache' => -1,
   );
 
@@ -1088,7 +1224,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -1102,7 +1238,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );
@@ -1116,7 +1252,7 @@ vc/site_settings',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
-    'pages' => '',
+    'pages' => 'global_home',
     'title' => '<none>',
     'cache' => '1',
   );

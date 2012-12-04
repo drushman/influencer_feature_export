@@ -12,11 +12,11 @@ function campus_blocks_setting_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Site copyright';
-  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'campus_copyright_menu';
   $fe_block_boxes->body = '<div class="influ_copyright">
 	<p class="copyright">Copyright &copy; 2009 - 2012. Paradise Community Church. All rights reserved.</p>
-	<p class="copy_link"><a href=/>Disclaimer </a>| <a href=/>Privacy Policy</a></p>
+	<p class="copy_link"><a href="/disclaimer">Disclaimer </a>| <a href="/privacy_policy">Privacy Policy</a></p>
 </div>';
 
   $export['campus_copyright_menu'] = $fe_block_boxes;
@@ -114,6 +114,14 @@ function campus_blocks_setting_default_fe_block_boxes() {
 ';
 
   $export['campus_dropdown_menu'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Display message for Concierge page';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'concierge_message_block';
+  $fe_block_boxes->body = 'These services are for newcomers. Visit <a href="/influencer">Be an Influencer</a> page for more information.';
+
+  $export['concierge_message_block'] = $fe_block_boxes;
 
   return $export;
 }

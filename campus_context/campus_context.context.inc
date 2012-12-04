@@ -13,6 +13,29 @@ function campus_context_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'current_active_menu_block_for_im_new_page';
+  $context->description = '';
+  $context->tag = 'Block';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'i-am-new' => 'i-am-new',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'menu' => 'group',
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Block');
+  $export['current_active_menu_block_for_im_new_page'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'dashboard_content_link';
   $context->description = '';
   $context->tag = 'Dashboard';
