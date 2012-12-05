@@ -164,7 +164,6 @@ features[variable][] = save_continue_ministry
 features[variable][] = save_continue_video
 features[variable][] = site_403
 features[variable][] = site_404
-features[variable][] = site_frontpage
 features[variable][] = superfish_arrow_1
 features[variable][] = superfish_arrow_2
 features[variable][] = superfish_bgf_1
