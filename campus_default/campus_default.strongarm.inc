@@ -21,7 +21,7 @@ function campus_default_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_college';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_college'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -35,7 +35,7 @@ function campus_default_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_event';
-  $strongarm->value = 'edit-comment';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_event'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -56,14 +56,14 @@ function campus_default_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ministry';
-  $strongarm->value = 'edit-display';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_ministry'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_video';
-  $strongarm->value = 'edit-comment';
+  $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_video'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1020,9 +1020,9 @@ user/*/*';
     9 => 'menu-fresh-dashboard',
     10 => 'menu-influncer-campus',
     12 => 'menu-new-influencer',
-    13 => 'menu-global-campus',
     14 => 'menu-campus-giving-time',
     15 => 'menu-campus-giving-money',
+    16 => 'menu-site-copyright',
   );
   $export['menu_default_active_menus'] = $strongarm;
 
@@ -1337,8 +1337,22 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'site_403';
+  $strongarm->value = 'error/403';
+  $export['site_403'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_404';
+  $strongarm->value = 'error/404';
+  $export['site_404'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'home';
+  $strongarm->value = 'global_home';
   $export['site_frontpage'] = $strongarm;
 
   $strongarm = new stdClass();

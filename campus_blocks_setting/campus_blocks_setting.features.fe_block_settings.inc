@@ -49,9 +49,6 @@ function campus_blocks_setting_default_fe_block_settings() {
     'menu_block-2' => array(
       'delta' => '2',
       'module' => 'menu_block',
-      'node_type' => array(
-        'event' => TRUE,
-      ),
     ),
     'menu_block-3' => array(
       'delta' => '3',
