@@ -597,7 +597,7 @@ var dd = new YAHOO.util.DD(\'maindiv\'); dd.setHandleElId(\'titlediv\');
     'created' => '1352344442',
     'comment' => '1',
     'translate' => '0',
-    'machine_name' => 'giving_time',
+    'machine_name' => 'giving_time_webform',
     'body' => array(),
   );
 
@@ -1014,7 +1014,7 @@ var dd = new YAHOO.util.DD(\'maindiv\'); dd.setHandleElId(\'titlediv\');
     'created' => '1352343702',
     'comment' => '1',
     'translate' => '0',
-    'machine_name' => 'join_group',
+    'machine_name' => 'join_group_webform',
     'body' => array(),
   );
 
@@ -1023,7 +1023,7 @@ var dd = new YAHOO.util.DD(\'maindiv\'); dd.setHandleElId(\'titlediv\');
     'webform' => array(
       'confirmation' => '',
       'confirmation_format' => 'filtered_html',
-      'redirect_url' => '<confirmation>',
+      'redirect_url' => '/thank_you',
       'status' => '1',
       'block' => '1',
       'teaser' => '0',
@@ -1119,7 +1119,24 @@ var dd = new YAHOO.util.DD(\'maindiv\'); dd.setHandleElId(\'titlediv\');
           'form_key' => 'nid',
           'name' => 'Nid',
           'type' => 'hidden',
-          'value' => '',
+          'value' => '%nid',
+          'extra' => array(
+            'hidden_type' => 'hidden',
+            'conditional_operator' => '=',
+            'private' => 0,
+            'conditional_component' => '',
+            'conditional_values' => '',
+          ),
+          'mandatory' => '0',
+          'weight' => '3',
+          'page_num' => 1,
+        ),
+        4 => array(
+          'pid' => '0',
+          'form_key' => 'ntitle',
+          'name' => 'Title',
+          'type' => 'hidden',
+          'value' => '%title',
           'extra' => array(
             'hidden_type' => 'hidden',
             'conditional_operator' => '=',
@@ -1142,7 +1159,7 @@ var dd = new YAHOO.util.DD(\'maindiv\'); dd.setHandleElId(\'titlediv\');
     'created' => '1352023993',
     'comment' => '2',
     'translate' => '0',
-    'machine_name' => 'ministry_connect_form',
+    'machine_name' => 'ministry_connect_webform',
     'body' => array(),
   );
 
@@ -1220,7 +1237,7 @@ var dd = new YAHOO.util.DD(\'maindiv\'); dd.setHandleElId(\'titlediv\');
     'created' => '1352359455',
     'comment' => '2',
     'translate' => '0',
-    'machine_name' => 'prayer_fasting',
+    'machine_name' => 'prayer_fasting_webform',
     'body' => array(),
   );
 

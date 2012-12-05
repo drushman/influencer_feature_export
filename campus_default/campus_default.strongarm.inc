@@ -1087,68 +1087,6 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_campus';
-  $strongarm->value = array();
-  $export['menu_options_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_concierge';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
-  $export['menu_options_concierge'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_global_campus';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
-  $export['menu_options_global_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_global_member';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
-  $export['menu_options_global_member'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_campus';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_concierge';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_concierge'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_global_campus';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_global_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_global_member';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_global_member'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_campus';
   $strongarm->value = array(
     0 => 'status',
@@ -1347,6 +1285,13 @@ user/*/*';
   $strongarm->name = 'site_404';
   $strongarm->value = 'error/404';
   $export['site_404'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_frontpage';
+  $strongarm->value = 'home';
+  $export['site_frontpage'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

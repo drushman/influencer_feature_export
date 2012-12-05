@@ -18,20 +18,8 @@ function campus_blocks_setting_default_fe_block_settings() {
       'machine_name' => 'campus_copyright_menu',
       'module' => 'block',
     ),
-    'block-campus_devotions_online_button' => array(
-      'machine_name' => 'campus_devotions_online_button',
-      'module' => 'block',
-    ),
     'block-campus_dropdown_menu' => array(
       'machine_name' => 'campus_dropdown_menu',
-      'module' => 'block',
-    ),
-    'block-campus_podcasts_button' => array(
-      'machine_name' => 'campus_podcasts_button',
-      'module' => 'block',
-    ),
-    'block-concierge_message_block' => array(
-      'machine_name' => 'concierge_message_block',
       'module' => 'block',
     ),
     'menu-menu-footer-menu' => array(
@@ -118,20 +106,6 @@ vc/site_settings',
     'machine_name' => 'campus_copyright_menu',
   );
 
-  $theme['block-campus_podcasts_button'] = array(
-    'module' => 'block',
-    'theme' => 'admintheme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'campus_podcasts_button',
-  );
-
   $theme['block-campus_dropdown_menu'] = array(
     'module' => 'block',
     'theme' => 'admintheme',
@@ -150,34 +124,6 @@ vc/site_settings',
     'title' => 'Dropdown mennu',
     'cache' => -1,
     'machine_name' => 'campus_dropdown_menu',
-  );
-
-  $theme['block-concierge_message_block'] = array(
-    'module' => 'block',
-    'theme' => 'admintheme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'concierge_message_block',
-  );
-
-  $theme['block-campus_devotions_online_button'] = array(
-    'module' => 'block',
-    'theme' => 'admintheme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'campus_devotions_online_button',
   );
 
   $theme['menu-menu-footer-menu'] = array(
@@ -438,20 +384,6 @@ vc/site_settings',
     'machine_name' => 'campus_copyright_menu',
   );
 
-  $theme['block-campus_podcasts_button'] = array(
-    'module' => 'block',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'campus_podcasts_button',
-  );
-
   $theme['block-campus_dropdown_menu'] = array(
     'module' => 'block',
     'theme' => 'bartik',
@@ -470,34 +402,6 @@ vc/site_settings',
     'title' => 'Dropdown mennu',
     'cache' => -1,
     'machine_name' => 'campus_dropdown_menu',
-  );
-
-  $theme['block-concierge_message_block'] = array(
-    'module' => 'block',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'concierge_message_block',
-  );
-
-  $theme['block-campus_devotions_online_button'] = array(
-    'module' => 'block',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'campus_devotions_online_button',
   );
 
   $theme['menu-menu-footer-menu'] = array(
@@ -758,20 +662,6 @@ vc/site_settings',
     'machine_name' => 'campus_copyright_menu',
   );
 
-  $theme['block-campus_podcasts_button'] = array(
-    'module' => 'block',
-    'theme' => 'influencerschurch',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'campus_podcasts_button',
-  );
-
   $theme['block-campus_dropdown_menu'] = array(
     'module' => 'block',
     'theme' => 'influencerschurch',
@@ -790,34 +680,6 @@ vc/site_settings',
     'title' => 'Dropdown mennu',
     'cache' => -1,
     'machine_name' => 'campus_dropdown_menu',
-  );
-
-  $theme['block-concierge_message_block'] = array(
-    'module' => 'block',
-    'theme' => 'influencerschurch',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'concierge_message_block',
-  );
-
-  $theme['block-campus_devotions_online_button'] = array(
-    'module' => 'block',
-    'theme' => 'influencerschurch',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'campus_devotions_online_button',
   );
 
   $theme['menu-menu-footer-menu'] = array(
@@ -1078,20 +940,6 @@ vc/site_settings',
     'machine_name' => 'campus_copyright_menu',
   );
 
-  $theme['block-campus_podcasts_button'] = array(
-    'module' => 'block',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'campus_podcasts_button',
-  );
-
   $theme['block-campus_dropdown_menu'] = array(
     'module' => 'block',
     'theme' => 'seven',
@@ -1110,34 +958,6 @@ vc/site_settings',
     'title' => 'Dropdown mennu',
     'cache' => -1,
     'machine_name' => 'campus_dropdown_menu',
-  );
-
-  $theme['block-concierge_message_block'] = array(
-    'module' => 'block',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'concierge_message_block',
-  );
-
-  $theme['block-campus_devotions_online_button'] = array(
-    'module' => 'block',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'machine_name' => 'campus_devotions_online_button',
   );
 
   $theme['menu-menu-footer-menu'] = array(
