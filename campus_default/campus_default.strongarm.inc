@@ -27,13 +27,6 @@ function campus_default_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_concierge';
-  $strongarm->value = 'edit-menu';
-  $export['additional_settings__active_tab_concierge'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_event';
   $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_event'] = $strongarm;
@@ -1096,15 +1089,6 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_concierge';
-  $strongarm->value = array(
-    0 => 'status',
-  );
-  $export['node_options_concierge'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_global_campus';
   $strongarm->value = array(
     0 => 'status',
@@ -1140,13 +1124,6 @@ user/*/*';
   $strongarm->name = 'node_submitted_campus';
   $strongarm->value = 1;
   $export['node_submitted_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_concierge';
-  $strongarm->value = 1;
-  $export['node_submitted_concierge'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -1226,13 +1203,6 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'save_continue_concierge';
-  $strongarm->value = 'Save and add fields';
-  $export['save_continue_concierge'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_event';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_event'] = $strongarm;
@@ -1290,7 +1260,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'home';
+  $strongarm->value = 'global_home';
   $export['site_frontpage'] = $strongarm;
 
   $strongarm = new stdClass();
