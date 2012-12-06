@@ -1132,7 +1132,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'message-block',
+    );
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
@@ -1167,7 +1170,7 @@ function campus_panel_default_page_manager_pages() {
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-current_active_menu';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
