@@ -88,7 +88,7 @@ function campus_content_type_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'bar',
+          'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
         'weight' => '4',
@@ -999,94 +999,6 @@ function campus_content_type_field_default_fields() {
         ),
         'type' => 'image_image',
         'weight' => '6',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-event-field_event_type'.
-  $fields['node-event-field_event_type'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_event_type',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'event_type',
-            'parent' => '0',
-          ),
-        ),
-        'profile2_private' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'event',
-      'default_value' => array(
-        0 => array(
-          'tid' => '6',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'custom_teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 7,
-        ),
-        'full' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_event_type',
-      'label' => 'Event type',
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '1',
       ),
     ),
   );
@@ -2469,7 +2381,6 @@ function campus_content_type_field_default_fields() {
   t('Email');
   t('Event Image');
   t('Event Video');
-  t('Event type');
   t('Image');
   t('Is Home');
   t('Is global event');
