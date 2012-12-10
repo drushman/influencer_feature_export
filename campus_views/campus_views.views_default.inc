@@ -478,6 +478,9 @@ function campus_views_views_default_views() {
   $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_video']['type'] = 'media';
+  $handler->display->display_options['fields']['field_video']['settings'] = array(
+    'file_view_mode' => 'media_preview',
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */

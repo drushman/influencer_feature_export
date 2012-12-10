@@ -79,6 +79,9 @@ function campus_content_type_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'custom_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -124,6 +127,9 @@ function campus_content_type_strongarm() {
       'church_life_teaser' => array(
         'custom_settings' => TRUE,
       ),
+      'custom_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -164,6 +170,9 @@ function campus_content_type_strongarm() {
         'custom_settings' => FALSE,
       ),
       'church_life_teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'custom_teaser' => array(
         'custom_settings' => TRUE,
       ),
     ),

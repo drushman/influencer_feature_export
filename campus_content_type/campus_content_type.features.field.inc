@@ -670,7 +670,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'above',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
           'weight' => '6',
@@ -679,7 +679,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
           'weight' => '6',
@@ -1045,7 +1045,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'above',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
           'weight' => '1',
@@ -1054,7 +1054,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
           'weight' => '0',
@@ -1294,7 +1294,7 @@ function campus_content_type_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'full' => array(
           'label' => 'above',
@@ -1485,7 +1485,7 @@ function campus_content_type_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'above',
@@ -1658,16 +1658,18 @@ function campus_content_type_field_default_fields() {
         ),
         'default' => array(
           'label' => 'above',
-          'module' => NULL,
-          'settings' => array(),
-          'type' => 'media_large',
-          'weight' => 5,
+          'module' => 'media',
+          'settings' => array(
+            'file_view_mode' => 'media_preview',
+          ),
+          'type' => 'media',
+          'weight' => '5',
         ),
         'full' => array(
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
           'weight' => '2',
@@ -1767,9 +1769,8 @@ function campus_content_type_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '1',
         ),
       ),
@@ -1912,7 +1913,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
           'weight' => '1',
@@ -1921,7 +1922,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'media_large',
+            'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
           'weight' => '0',
@@ -1930,7 +1931,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
           'weight' => '0',
