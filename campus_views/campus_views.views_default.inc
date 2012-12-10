@@ -143,7 +143,6 @@ function campus_views_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'campus_event_title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -311,11 +310,10 @@ function campus_views_views_default_views() {
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
-  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['label'] = 'Title';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -463,6 +461,47 @@ function campus_views_views_default_views() {
   $handler->display->display_options['filters']['field_upcoming_event_value']['value'] = array(
     1 => '1',
   );
+
+  /* Display: Homepage Video */
+  $handler = $view->new_display('block', 'Homepage Video', 'block_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Video */
+  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
+  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['label'] = '';
+  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_video']['type'] = 'media';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'video' => 'video',
+  );
+  /* Filter criterion: Content: Is Home (field_is_home) */
+  $handler->display->display_options['filters']['field_is_home_value']['id'] = 'field_is_home_value';
+  $handler->display->display_options['filters']['field_is_home_value']['table'] = 'field_data_field_is_home';
+  $handler->display->display_options['filters']['field_is_home_value']['field'] = 'field_is_home_value';
+  $handler->display->display_options['filters']['field_is_home_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['block_description'] = 'Homepage video Block';
   $export['homepage'] = $view;
 
   $view = new view();
@@ -1217,94 +1256,6 @@ function campus_views_views_default_views() {
   $handler->display->display_options['arguments']['type']['limit'] = '0';
   $handler->display->display_options['block_description'] = 'Vc Content Admin Page Header';
   $export['vc_content_admin'] = $view;
-
-  $view = new view();
-  $view->name = 'video';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Video';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: Content: Video */
-  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
-  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['label'] = '';
-  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_video']['type'] = 'media';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-
-  /* Display: Homepage Video */
-  $handler = $view->new_display('block', 'Homepage Video', 'block');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Video */
-  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
-  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
-  $handler->display->display_options['fields']['field_video']['label'] = '';
-  $handler->display->display_options['fields']['field_video']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_video']['alter']['text'] = '<div class="home_video">[field_video]</div>';
-  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_video']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_video']['type'] = 'media';
-  $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'file_view_mode' => 'default',
-  );
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Is Home (field_is_home) */
-  $handler->display->display_options['filters']['field_is_home_value']['id'] = 'field_is_home_value';
-  $handler->display->display_options['filters']['field_is_home_value']['table'] = 'field_data_field_is_home';
-  $handler->display->display_options['filters']['field_is_home_value']['field'] = 'field_is_home_value';
-  $handler->display->display_options['filters']['field_is_home_value']['operator'] = 'and';
-  $handler->display->display_options['filters']['field_is_home_value']['value'] = array(
-    1 => '1',
-  );
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'video' => 'video',
-  );
-  $export['video'] = $view;
 
   return $export;
 }
