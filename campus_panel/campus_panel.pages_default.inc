@@ -1083,7 +1083,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'webform-concierge',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
@@ -1939,7 +1942,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'webform-groups',
+    );
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
