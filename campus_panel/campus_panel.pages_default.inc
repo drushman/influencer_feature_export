@@ -1693,7 +1693,7 @@ function campus_panel_default_page_manager_pages() {
     $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-campus_event_page_title';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
@@ -1714,7 +1714,7 @@ function campus_panel_default_page_manager_pages() {
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'event';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_pager_settings' => 0,
@@ -3704,7 +3704,7 @@ function campus_panel_default_page_manager_pages() {
     $pane->panel = 'center';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-campus_team_page_title';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
@@ -3725,7 +3725,7 @@ function campus_panel_default_page_manager_pages() {
     $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'team_views';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_pager_settings' => 0,
