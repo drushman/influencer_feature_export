@@ -17,6 +17,7 @@ features[page_manager_pages][] = be_an_influencer
 features[page_manager_pages][] = campus_church_life_page
 features[page_manager_pages][] = college
 features[page_manager_pages][] = concierge_page
+features[page_manager_pages][] = contact_page
 features[page_manager_pages][] = devotions_online
 features[page_manager_pages][] = disclaimer
 features[page_manager_pages][] = events_listing
