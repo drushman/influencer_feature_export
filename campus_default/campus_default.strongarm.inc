@@ -629,6 +629,35 @@ user/*/*';
         ),
       ),
     ),
+    3 => array(
+      'name' => 'content editor',
+      'usertab' => 1,
+      'filesize' => '0',
+      'quota' => '0',
+      'tuquota' => '0',
+      'extensions' => '*',
+      'dimensions' => '800x600',
+      'filenum' => '1',
+      'directories' => array(
+        0 => array(
+          'name' => 'u%uid',
+          'subnav' => 0,
+          'browse' => 1,
+          'upload' => 1,
+          'thumb' => 1,
+          'delete' => 1,
+          'resize' => 0,
+        ),
+      ),
+      'thumbnails' => array(
+        0 => array(
+          'name' => 'Thumb',
+          'dimensions' => '90x90',
+          'prefix' => 'thumb_',
+          'suffix' => '',
+        ),
+      ),
+    ),
   );
   $export['imce_profiles'] = $strongarm;
 
@@ -707,6 +736,20 @@ user/*/*';
   $strongarm->name = 'node_submitted_global_member';
   $strongarm->value = 1;
   $export['node_submitted_global_member'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_manager_node_edit_disabled';
+  $strongarm->value = TRUE;
+  $export['page_manager_node_edit_disabled'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_manager_node_view_disabled';
+  $strongarm->value = FALSE;
+  $export['page_manager_node_view_disabled'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -829,7 +872,7 @@ user/*/*';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'home';
+  $strongarm->value = 'global_home';
   $export['site_frontpage'] = $strongarm;
 
   $strongarm = new stdClass();
