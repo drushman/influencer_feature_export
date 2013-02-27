@@ -112,6 +112,50 @@ function campus_default_image_default_styles() {
     ),
   );
 
+  // Exported image style: global_home_campus_main_image.
+  $styles['global_home_campus_main_image'] = array(
+    'name' => 'global_home_campus_main_image',
+    'effects' => array(
+      12 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '490',
+          'height' => '279',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: global_home_campus_member_image.
+  $styles['global_home_campus_member_image'] = array(
+    'name' => 'global_home_campus_member_image',
+    'effects' => array(
+      13 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '120',
+          'height' => '120',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: homepage_rollover_image.
   $styles['homepage_rollover_image'] = array(
     'name' => 'homepage_rollover_image',

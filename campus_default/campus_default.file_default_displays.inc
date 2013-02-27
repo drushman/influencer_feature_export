@@ -142,8 +142,8 @@ function campus_default_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'width' => '666',
-    'height' => '371',
+    'width' => '100',
+    'height' => '100',
     'autoplay' => 0,
   );
   $export['video__media_preview__media_vimeo_video'] = $file_display;
@@ -154,8 +154,8 @@ function campus_default_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'width' => '666',
-    'height' => '371',
+    'width' => '100',
+    'height' => '100',
     'theme' => 'dark',
     'color' => 'red',
     'autohide' => '2',

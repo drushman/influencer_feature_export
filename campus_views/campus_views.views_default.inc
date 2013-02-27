@@ -479,7 +479,7 @@ function campus_views_views_default_views() {
   $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_video']['type'] = 'media';
   $handler->display->display_options['fields']['field_video']['settings'] = array(
-    'file_view_mode' => 'media_preview',
+    'file_view_mode' => 'default',
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -1198,7 +1198,7 @@ function campus_views_views_default_views() {
   $handler->display->display_options['arguments']['type']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['type']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['type']['limit'] = '0';
-  $handler->display->display_options['path'] = 'vc/contents/%';
+  $handler->display->display_options['path'] = 'vc/contents/item/%';
 
   /* Display: Vc Content Admin Page Header */
   $handler = $view->new_display('block', 'Vc Content Admin Page Header', 'block_1');

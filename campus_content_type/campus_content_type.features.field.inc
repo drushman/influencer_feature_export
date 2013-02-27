@@ -679,7 +679,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'media_preview',
+            'file_view_mode' => 'default',
           ),
           'type' => 'media',
           'weight' => '6',
@@ -803,7 +803,7 @@ function campus_content_type_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -863,7 +863,7 @@ function campus_content_type_field_default_fields() {
           'weight' => '5',
         ),
         'full' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'date',
           'settings' => array(
             'format_type' => 'long',
@@ -907,6 +907,81 @@ function campus_content_type_field_default_fields() {
         ),
         'type' => 'date_popup',
         'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-event-field_event_date'.
+  $fields['node-event-field_event_date'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_event_date',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          1 => 'Show Event Date',
+        ),
+        'allowed_values_function' => '',
+        'profile2_private' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'list_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'event',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'custom_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 7,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '0',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_event_date',
+      'label' => 'Event Date',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '3',
       ),
     ),
   );
@@ -1054,7 +1129,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'media_preview',
+            'file_view_mode' => 'default',
           ),
           'type' => 'media',
           'weight' => '0',
@@ -1669,7 +1744,7 @@ function campus_content_type_field_default_fields() {
           'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
-            'file_view_mode' => 'media_preview',
+            'file_view_mode' => 'default',
           ),
           'type' => 'media',
           'weight' => '2',
@@ -2380,6 +2455,7 @@ function campus_content_type_field_default_fields() {
   t('Date');
   t('Description');
   t('Email');
+  t('Event Date');
   t('Event Image');
   t('Event Video');
   t('Image');

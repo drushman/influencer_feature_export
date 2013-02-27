@@ -34,20 +34,6 @@ function campus_default_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_global_campus';
-  $strongarm->value = 'edit-menu';
-  $export['additional_settings__active_tab_global_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_global_member';
-  $strongarm->value = 'edit-menu';
-  $export['additional_settings__active_tab_global_member'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ministry';
   $strongarm->value = 'edit-menu';
   $export['additional_settings__active_tab_ministry'] = $strongarm;
@@ -184,52 +170,6 @@ function campus_default_strongarm() {
     ),
   );
   $export['field_bundle_settings_file__video'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__global_campus';
-  $strongarm->value = array(
-    'view_modes' => array(),
-    'extra_fields' => array(
-      'form' => array(
-        'metatags' => array(
-          'weight' => '40',
-        ),
-        'title' => array(
-          'weight' => '-5',
-        ),
-        'path' => array(
-          'weight' => '30',
-        ),
-      ),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_node__global_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__global_member';
-  $strongarm->value = array(
-    'view_modes' => array(),
-    'extra_fields' => array(
-      'form' => array(
-        'metatags' => array(
-          'weight' => '40',
-        ),
-        'title' => array(
-          'weight' => '-5',
-        ),
-        'path' => array(
-          'weight' => '30',
-        ),
-      ),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_node__global_member'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -435,6 +375,8 @@ user/*/*';
     3 => 0,
     4 => 0,
     5 => 0,
+    6 => 0,
+    7 => 0,
   );
   $export['googleanalytics_roles'] = $strongarm;
 
@@ -687,55 +629,9 @@ user/*/*';
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_global_campus';
-  $strongarm->value = array(
-    0 => 'status',
-  );
-  $export['node_options_global_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_global_member';
-  $strongarm->value = array(
-    0 => 'status',
-  );
-  $export['node_options_global_member'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_global_campus';
-  $strongarm->value = '1';
-  $export['node_preview_global_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_global_member';
-  $strongarm->value = '1';
-  $export['node_preview_global_member'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_campus';
   $strongarm->value = 1;
   $export['node_submitted_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_global_campus';
-  $strongarm->value = 1;
-  $export['node_submitted_global_campus'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_global_member';
-  $strongarm->value = 1;
-  $export['node_submitted_global_member'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -874,6 +770,13 @@ user/*/*';
   $strongarm->name = 'site_frontpage';
   $strongarm->value = 'home';
   $export['site_frontpage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_name';
+  $strongarm->value = 'Influencerschurch';
+  $export['site_name'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2327,11 +2230,10 @@ foo
       'omega-branding.css' => 'omega-branding.css',
       'omega-menu.css' => 'omega-menu.css',
       'omega-forms.css' => 'omega-forms.css',
-      'omega-visuals.css' => 'omega-visuals.css',
       'global.css' => 'global.css',
+      'omega-visuals.css' => 0,
     ),
     'alpha_exclude' => array(
-      'modules/comment/comment.css' => 0,
       'sites/all/modules/date/date_api/date.css' => 0,
       'sites/all/modules/date/date_popup/themes/datepicker.1.7.css' => 0,
       'modules/field/theme/field.css' => 0,
@@ -2340,6 +2242,7 @@ foo
       'modules/search/search.css' => 0,
       'modules/user/user.css' => 0,
       'sites/all/modules/views/css/views.css' => 0,
+      'sites/all/themes/admintheme/css/style.css' => 0,
       'misc/vertical-tabs.css' => 0,
       'modules/aggregator/aggregator.css' => 0,
       'modules/block/block.css' => 0,
@@ -2376,6 +2279,7 @@ foo
       4 => 0,
       5 => 0,
       6 => 0,
+      7 => 0,
     ),
     'alpha_toggle_messages' => 1,
     'alpha_toggle_action_links' => 1,
@@ -2386,36 +2290,6 @@ foo
     'alpha_hidden_title' => 0,
     'alpha_hidden_site_name' => 0,
     'alpha_hidden_site_slogan' => 0,
-    'alpha_region_dashboard_main_force' => 0,
-    'alpha_region_dashboard_main_zone' => NULL,
-    'alpha_region_dashboard_main_prefix' => '0',
-    'alpha_region_dashboard_main_columns' => '1',
-    'alpha_region_dashboard_main_suffix' => '0',
-    'alpha_region_dashboard_main_weight' => '-50',
-    'alpha_region_dashboard_main_position' => '0',
-    'alpha_region_dashboard_main_css' => '',
-    'alpha_region_dashboard_main_equal_height_element' => FALSE,
-    'alpha_region_dashboard_main_equal_height_container' => 0,
-    'alpha_region_dashboard_inactive_force' => 0,
-    'alpha_region_dashboard_inactive_zone' => NULL,
-    'alpha_region_dashboard_inactive_prefix' => '0',
-    'alpha_region_dashboard_inactive_columns' => '1',
-    'alpha_region_dashboard_inactive_suffix' => '0',
-    'alpha_region_dashboard_inactive_weight' => '-50',
-    'alpha_region_dashboard_inactive_position' => '0',
-    'alpha_region_dashboard_inactive_css' => '',
-    'alpha_region_dashboard_inactive_equal_height_element' => FALSE,
-    'alpha_region_dashboard_inactive_equal_height_container' => 0,
-    'alpha_region_dashboard_sidebar_force' => 0,
-    'alpha_region_dashboard_sidebar_zone' => NULL,
-    'alpha_region_dashboard_sidebar_prefix' => '0',
-    'alpha_region_dashboard_sidebar_columns' => '1',
-    'alpha_region_dashboard_sidebar_suffix' => '0',
-    'alpha_region_dashboard_sidebar_weight' => '-50',
-    'alpha_region_dashboard_sidebar_position' => '0',
-    'alpha_region_dashboard_sidebar_css' => '',
-    'alpha_region_dashboard_sidebar_equal_height_element' => FALSE,
-    'alpha_region_dashboard_sidebar_equal_height_container' => 0,
     'alpha_zone_user_wrapper' => 1,
     'alpha_zone_user_force' => 0,
     'alpha_zone_user_order' => 0,
@@ -2694,7 +2568,7 @@ foo
     'toggle_main_menu' => 0,
     'toggle_secondary_menu' => 0,
     'default_logo' => 1,
-    'logo_path' => '',
+    'logo_path' => 'public://newbug.jpg',
     'logo_upload' => '',
     'default_favicon' => 1,
     'favicon_path' => '',
@@ -2740,15 +2614,16 @@ foo
       'global.css' => 'global.css',
     ),
     'alpha_exclude' => array(
-      'modules/comment/comment.css' => 0,
       'sites/all/modules/date/date_api/date.css' => 0,
       'sites/all/modules/date/date_popup/themes/datepicker.1.7.css' => 0,
       'modules/field/theme/field.css' => 0,
+      'sites/all/modules/google_analytics_reports/google_analytics_reports/google_analytics_reports.css' => 0,
       'modules/node/node.css' => 0,
       'modules/search/search.css' => 0,
       'modules/user/user.css' => 0,
       'sites/all/modules/views/css/views.css' => 0,
       'sites/all/themes/influencerschurch/css/style.css' => 0,
+      'sites/all/themes/influencerschurch/css/jcarousel.css' => 0,
       'misc/vertical-tabs.css' => 0,
       'modules/aggregator/aggregator.css' => 0,
       'modules/block/block.css' => 0,
@@ -2782,6 +2657,10 @@ foo
       1 => 0,
       2 => 0,
       3 => 0,
+      4 => 0,
+      5 => 0,
+      6 => 0,
+      7 => 0,
     ),
     'alpha_toggle_messages' => 1,
     'alpha_toggle_action_links' => 1,
@@ -2792,36 +2671,6 @@ foo
     'alpha_hidden_title' => 0,
     'alpha_hidden_site_name' => 0,
     'alpha_hidden_site_slogan' => 0,
-    'alpha_region_dashboard_main_force' => 0,
-    'alpha_region_dashboard_main_zone' => NULL,
-    'alpha_region_dashboard_main_prefix' => '0',
-    'alpha_region_dashboard_main_columns' => '1',
-    'alpha_region_dashboard_main_suffix' => '0',
-    'alpha_region_dashboard_main_weight' => '-50',
-    'alpha_region_dashboard_main_position' => '0',
-    'alpha_region_dashboard_main_css' => '',
-    'alpha_region_dashboard_main_equal_height_element' => FALSE,
-    'alpha_region_dashboard_main_equal_height_container' => 0,
-    'alpha_region_dashboard_inactive_force' => 0,
-    'alpha_region_dashboard_inactive_zone' => NULL,
-    'alpha_region_dashboard_inactive_prefix' => '0',
-    'alpha_region_dashboard_inactive_columns' => '1',
-    'alpha_region_dashboard_inactive_suffix' => '0',
-    'alpha_region_dashboard_inactive_weight' => '-50',
-    'alpha_region_dashboard_inactive_position' => '0',
-    'alpha_region_dashboard_inactive_css' => '',
-    'alpha_region_dashboard_inactive_equal_height_element' => FALSE,
-    'alpha_region_dashboard_inactive_equal_height_container' => 0,
-    'alpha_region_dashboard_sidebar_force' => 0,
-    'alpha_region_dashboard_sidebar_zone' => NULL,
-    'alpha_region_dashboard_sidebar_prefix' => '0',
-    'alpha_region_dashboard_sidebar_columns' => '1',
-    'alpha_region_dashboard_sidebar_suffix' => '0',
-    'alpha_region_dashboard_sidebar_weight' => '-50',
-    'alpha_region_dashboard_sidebar_position' => '0',
-    'alpha_region_dashboard_sidebar_css' => '',
-    'alpha_region_dashboard_sidebar_equal_height_element' => FALSE,
-    'alpha_region_dashboard_sidebar_equal_height_container' => 0,
     'alpha_zone_user_wrapper' => 1,
     'alpha_zone_user_force' => 0,
     'alpha_zone_user_order' => 0,
@@ -3114,6 +2963,34 @@ foo
   $strongarm->name = 'user_admin_role';
   $strongarm->value = '3';
   $export['user_admin_role'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vc_dashboard_facebook_app_id';
+  $strongarm->value = '429990700387982';
+  $export['vc_dashboard_facebook_app_id'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vc_dashboard_facebook_app_secret';
+  $strongarm->value = '4c30f8c53e55ef064372ea1dca40c8d9';
+  $export['vc_dashboard_facebook_app_secret'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vc_dashboard_facebook_fanpage_id';
+  $strongarm->value = '118549218197195';
+  $export['vc_dashboard_facebook_fanpage_id'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vc_dashboard_twitter_page_name';
+  $strongarm->value = 'influencersfilm';
+  $export['vc_dashboard_twitter_page_name'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

@@ -14,10 +14,7 @@ function campus_blocks_setting_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Site copyright';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'campus_copyright_menu';
-  $fe_block_boxes->body = '<div class="influ_copyright">
-	<p class="copyright">Copyright &copy; 2009 - 2012. Paradise Community Church. All rights reserved.</p>
-	<p class="copy_link"><a href="/disclaimer">Disclaimer </a>| <a href="/privacy_policy">Privacy Policy</a></p>
-</div>';
+  $fe_block_boxes->body = '<div class="influ_copyright"><p class="copyright">Copyright © 2013. Paradise Community Church. All rights reserved.</p><p class="copy_link"><a href="/disclaimer">Disclaimer </a>| <a href="/privacy_policy">Privacy Policy</a></p></div><p>&nbsp;</p>';
 
   $export['campus_copyright_menu'] = $fe_block_boxes;
 

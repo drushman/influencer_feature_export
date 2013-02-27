@@ -26,10 +26,6 @@ function campus_blocks_setting_default_fe_block_settings() {
       'delta' => 'menu-footer-menu',
       'module' => 'menu',
     ),
-    'menu-menu-fresh-dashboard' => array(
-      'delta' => 'menu-fresh-dashboard',
-      'module' => 'menu',
-    ),
     'menu-menu-new-influencer' => array(
       'delta' => 'menu-new-influencer',
       'module' => 'menu',
@@ -45,6 +41,14 @@ function campus_blocks_setting_default_fe_block_settings() {
     'superfish-2' => array(
       'delta' => '2',
       'module' => 'superfish',
+    ),
+    'vc_admin-dashboard_menu_tool' => array(
+      'delta' => 'dashboard_menu_tool',
+      'module' => 'vc_admin',
+    ),
+    'vc_admin-dashboard_user_tool' => array(
+      'delta' => 'dashboard_user_tool',
+      'module' => 'vc_admin',
     ),
     'vc_content-campus_address' => array(
       'delta' => 'campus_address',
@@ -123,23 +127,6 @@ vc/site_settings',
     'cache' => -1,
   );
 
-  $theme['menu-menu-fresh-dashboard'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-fresh-dashboard',
-    'theme' => 'admintheme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'sidebar_first',
-    'custom' => '0',
-    'visibility' => '1',
-    'pages' => 'vc/*
-admin/structure/fieldable-panels-panes/view/*
-node/*
-user/*',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
   $theme['menu-menu-new-influencer'] = array(
     'module' => 'menu',
     'delta' => 'menu-new-influencer',
@@ -207,6 +194,37 @@ vc/site_settings',
     'pages' => '',
     'title' => '',
     'cache' => -1,
+  );
+
+  $theme['vc_admin-dashboard_menu_tool'] = array(
+    'module' => 'vc_admin',
+    'delta' => 'dashboard_menu_tool',
+    'theme' => 'admintheme',
+    'status' => '1',
+    'weight' => '-49',
+    'region' => 'sidebar_first',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => 'vc/*
+admin/structure/fieldable-panels-panes/view/*
+node/*
+user/*',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['vc_admin-dashboard_user_tool'] = array(
+    'module' => 'vc_admin',
+    'delta' => 'dashboard_user_tool',
+    'theme' => 'admintheme',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'branding',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => '1',
   );
 
   $theme['vc_content-campus_address'] = array(
@@ -316,23 +334,6 @@ vc/site_settings',
     'cache' => -1,
   );
 
-  $theme['menu-menu-fresh-dashboard'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-fresh-dashboard',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '1',
-    'pages' => 'vc/*
-admin/structure/fieldable-panels-panes/view/*
-node/*
-user/*',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
   $theme['menu-menu-new-influencer'] = array(
     'module' => 'menu',
     'delta' => 'menu-new-influencer',
@@ -400,6 +401,37 @@ vc/site_settings',
     'pages' => '',
     'title' => '',
     'cache' => -1,
+  );
+
+  $theme['vc_admin-dashboard_menu_tool'] = array(
+    'module' => 'vc_admin',
+    'delta' => 'dashboard_menu_tool',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => 'vc/*
+admin/structure/fieldable-panels-panes/view/*
+node/*
+user/*',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['vc_admin-dashboard_user_tool'] = array(
+    'module' => 'vc_admin',
+    'delta' => 'dashboard_user_tool',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => '1',
   );
 
   $theme['vc_content-campus_address'] = array(
@@ -509,23 +541,6 @@ vc/site_settings',
     'cache' => -1,
   );
 
-  $theme['menu-menu-fresh-dashboard'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-fresh-dashboard',
-    'theme' => 'influencerschurch',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '1',
-    'pages' => 'vc/*
-admin/structure/fieldable-panels-panes/view/*
-node/*
-user/*',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
   $theme['menu-menu-new-influencer'] = array(
     'module' => 'menu',
     'delta' => 'menu-new-influencer',
@@ -593,6 +608,37 @@ vc/site_settings',
     'pages' => '',
     'title' => '',
     'cache' => -1,
+  );
+
+  $theme['vc_admin-dashboard_menu_tool'] = array(
+    'module' => 'vc_admin',
+    'delta' => 'dashboard_menu_tool',
+    'theme' => 'influencerschurch',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => 'vc/*
+admin/structure/fieldable-panels-panes/view/*
+node/*
+user/*',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['vc_admin-dashboard_user_tool'] = array(
+    'module' => 'vc_admin',
+    'delta' => 'dashboard_user_tool',
+    'theme' => 'influencerschurch',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => '1',
   );
 
   $theme['vc_content-campus_address'] = array(
@@ -702,23 +748,6 @@ vc/site_settings',
     'cache' => -1,
   );
 
-  $theme['menu-menu-fresh-dashboard'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-fresh-dashboard',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '1',
-    'pages' => 'vc/*
-admin/structure/fieldable-panels-panes/view/*
-node/*
-user/*',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
   $theme['menu-menu-new-influencer'] = array(
     'module' => 'menu',
     'delta' => 'menu-new-influencer',
@@ -786,6 +815,37 @@ vc/site_settings',
     'pages' => '',
     'title' => '',
     'cache' => -1,
+  );
+
+  $theme['vc_admin-dashboard_menu_tool'] = array(
+    'module' => 'vc_admin',
+    'delta' => 'dashboard_menu_tool',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => 'vc/*
+admin/structure/fieldable-panels-panes/view/*
+node/*
+user/*',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['vc_admin-dashboard_user_tool'] = array(
+    'module' => 'vc_admin',
+    'delta' => 'dashboard_user_tool',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => '1',
   );
 
   $theme['vc_content-campus_address'] = array(

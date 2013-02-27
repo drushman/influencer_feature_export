@@ -231,33 +231,7 @@ function campus_panel_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => '403_page_content',
       'title' => '',
-      'body' => '<div class="image-error">
-	<img alt="404 error" src="http://brushfiredigital.com/403/images/oopsimg.png" style="width: 900px; height: 385px;" /></div>
-<div class="error_content">
-<div class="error_description">
-	<h2>
-		We&#39;re Sorry&hellip;</h2>
-	<p>This means that accessing the page or resource you were trying to reach is absolutely forbidden for some reason. You&#39;ll probably be able to find the information you need by one of the links on the right.</p>
-</div>
-<div class="navigation">
-	<h2>
-		Navigation</h2>
-	<ul>
-		<li>
-			<a href="/">Home Page</a></li>
-		<li>
-			<a href="/about-ash-jane">About</a></li>
-		<li>
-			<a href="/campus">Ministry</a></li>
-		<li>
-			<a href="/give">Online giving</a></li>
-		<li>
-			<a href="/podcasts">Podcasts</a></li>
-	</ul>
-</div>
-<div class="clear">
-	&nbsp;</div>
-</div>',
+      'body' => '<div class="image-error"><img alt="404 error" src="http://brushfiredigital.com/403/images/oopsimg.png" style="width: 900px; height: 385px;"></div><div class="error_content"><div class="error_description"><h2>Access denied! We\'re Sorry…</h2><p>This means that accessing the page or resource you were trying to reach is absolutely forbidden for some reason. You\'ll probably be able to find the information you need by one of the links on the right.</p></div><div class="navigation"><h2>Navigation</h2><ul><li><a href="/">Home Page</a></li><li><a href="/about-ash-jane">About</a></li><li><a href="/campus">Ministry</a></li><li><a href="/give">Online giving</a></li><li><a href="/podcasts">Podcasts</a></li></ul></div><div class="clear">&nbsp;</div></div><p>&nbsp;</p>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -341,34 +315,7 @@ function campus_panel_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => '404_page_content',
       'title' => '',
-      'body' => '<div class="image-error">
-	<img alt="404 error" src="http://brushfiredigital.com/404/images/oopsimg.png" style="width: 900px; height: 385px;" /></div>
-<div class="error_content">
-<div class="error_description">
-	<h2>
-		We&#39;re Sorry&hellip;</h2>
-	<p>We seem to have lost that page! You&#39;ll probably be able to find the information you need by one of the links on the right.</p>
-</div>
-<div class="navigation">
-	<h2>
-		Navigation</h2>
-	<ul>
-		<li>
-			<a href="/">Home Page</a></li>
-		<li>
-			<a href="/about-ash-jane">About</a></li>
-		<li>
-			<a href="/campus">Ministry</a></li>
-		<li>
-			<a href="/give">Online giving</a></li>
-		<li>
-			<a href="/podcasts">Podcasts</a></li>
-	</ul>
-</div>
-<div class="clear">
-	&nbsp;</div>
-</div>
-',
+      'body' => '<div class="image-error"><img alt="404 error" src="http://brushfiredigital.com/404/images/oopsimg.png" style="width: 900px; height: 385px;"></div><div class="error_content"><div class="error_description"><h2>Page not found! We\'re Sorry…</h2><p>We seem to have lost that page! You\'ll probably be able to find the information you need by one of the links on the right.</p></div><div class="navigation"><h2>Navigation</h2><ul><li><a href="/">Home Page</a></li><li><a href="/about-ash-jane">About</a></li><li><a href="/campus">Ministry</a></li><li><a href="/give">Online giving</a></li><li><a href="/podcasts">Podcasts</a></li></ul></div><div class="clear">&nbsp;</div></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -671,7 +618,21 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Campus Church Life';
   $page->admin_description = '';
   $page->path = 'campus';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -837,7 +798,21 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'College';
   $page->admin_description = '';
   $page->path = 'college';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -976,7 +951,10 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Concierge Page';
   $page->admin_description = '';
   $page->path = 'concierge';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -1325,7 +1303,21 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Devotions online';
   $page->admin_description = '';
   $page->path = 'devotions_online';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -1616,7 +1608,21 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Events Listing';
   $page->admin_description = '';
   $page->path = 'events';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -1780,7 +1786,10 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Give';
   $page->admin_description = '';
   $page->path = 'give';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -1900,7 +1909,21 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Group page';
   $page->admin_description = '';
   $page->path = 'group';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -2259,7 +2282,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Homepage';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -2388,7 +2411,7 @@ function campus_panel_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-50'] = $pane;
     $display->panels['middle'][3] = 'new-50';
-  $display->hide_title = PANELS_TITLE_PANE;
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
@@ -2965,7 +2988,10 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Podcasts';
   $page->admin_description = '';
   $page->path = 'podcasts';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -3217,7 +3243,21 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Services';
   $page->admin_description = '';
   $page->path = 'services';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -3323,7 +3363,21 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Store';
   $page->admin_description = '';
   $page->path = 'store';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
@@ -3606,7 +3660,21 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_title = 'Team page';
   $page->admin_description = '';
   $page->path = 'team';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
