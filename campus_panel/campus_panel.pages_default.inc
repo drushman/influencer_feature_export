@@ -3284,12 +3284,16 @@ function campus_panel_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'twocol_stacked';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
     ),
   );
   $display->cache = array();
@@ -3298,7 +3302,51 @@ function campus_panel_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-70';
-    $pane->panel = 'center';
+    $pane->panel = 'left';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:11';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-70'] = $pane;
+    $display->panels['left'][0] = 'new-70';
+    $pane = new stdClass();
+    $pane->pid = 'new-71';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'vc_content-current_active_main_menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'sidebar-menu',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-71'] = $pane;
+    $display->panels['right'][0] = 'new-71';
+    $pane = new stdClass();
+    $pane->pid = 'new-72';
+    $pane->panel = 'top';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
     $pane->shown = TRUE;
@@ -3327,28 +3375,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-70'] = $pane;
-    $display->panels['center'][0] = 'new-70';
-    $pane = new stdClass();
-    $pane->pid = 'new-71';
-    $pane->panel = 'center';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:11';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'full',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-71'] = $pane;
-    $display->panels['center'][1] = 'new-71';
+    $display->content['new-72'] = $pane;
+    $display->panels['top'][0] = 'new-72';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3417,7 +3445,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-72';
+    $pane->pid = 'new-73';
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
@@ -3447,10 +3475,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-72'] = $pane;
-    $display->panels['middle'][0] = 'new-72';
+    $display->content['new-73'] = $pane;
+    $display->panels['middle'][0] = 'new-73';
     $pane = new stdClass();
-    $pane->pid = 'new-73';
+    $pane->pid = 'new-74';
     $pane->panel = 'middle';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'fpid:15';
@@ -3467,51 +3495,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-73'] = $pane;
-    $display->panels['middle'][1] = 'new-73';
-    $pane = new stdClass();
-    $pane->pid = 'new-74';
-    $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Store button',
-      'title' => '',
-      'body' => '<div class="store_conference">
-	<div class="store_conference_image">
-		<a href="/sites/default/files/store-image.png"><img alt="" src="/sites/default/files/store-image.png" style="width: 300px; height: 287px;" /></a></div>
-	<div class="store_conference_title">
-		<a href="/" target="_blank" title="Conference">Conference</a></div>
-</div>
-<div class="store_ash_jane">
-	<div class="store_conference_image">
-		<a href="/sites/default/files/store-image.png"><img alt="" src="/sites/default/files/store-image.png" style="width: 300px; height: 287px;" /></a></div>
-	<div class="store_conference_title">
-		<a href="/" target="_blank" title="Ashley &amp; Jane Evans">Ashley &amp; Jane Evans</a></div>
-</div>
-<div class="store_albums">
-	<div class="store_conference_image">
-		<a href="/sites/default/files/store-image.png"><img alt="" src="/sites/default/files/store-image.png" style="width: 300px; height: 287px;" /></a></div>
-	<div class="store_conference_title">
-		<a href="/" target="_blank" title="Albums">Albums</a></div>
-</div>
-<p>&nbsp;</p>
-',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
     $display->content['new-74'] = $pane;
-    $display->panels['middle'][2] = 'new-74';
+    $display->panels['middle'][1] = 'new-74';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
