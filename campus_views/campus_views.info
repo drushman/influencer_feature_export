@@ -18,3 +18,6 @@ features[views_view][] = influencer_webform_views
 features[views_view][] = ministry
 features[views_view][] = team_views
 features[views_view][] = vc_content_admin
+features[views_view][] = vc_content_nodetype_admin
+features[views_view][] = vc_content_pages_admin
+features[views_view][] = video
