@@ -10,6 +10,17 @@
 function campus_permissions_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: access administration menu.
+  $permissions['access administration menu'] = array(
+    'name' => 'access administration menu',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
+    ),
+    'module' => 'admin_menu',
+  );
+
   // Exported permission: access administration pages.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
@@ -182,15 +193,6 @@ function campus_permissions_user_default_permissions() {
     'module' => 'chart',
   );
 
-  // Exported permission: administer consumers.
-  $permissions['administer consumers'] = array(
-    'name' => 'administer consumers',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'oauth_common',
-  );
-
   // Exported permission: administer content types.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
@@ -321,15 +323,6 @@ function campus_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer oauth.
-  $permissions['administer oauth'] = array(
-    'name' => 'administer oauth',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'oauth_common',
-  );
-
   // Exported permission: administer page manager.
   $permissions['administer page manager'] = array(
     'name' => 'administer page manager',
@@ -409,15 +402,6 @@ function campus_permissions_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'search',
-  );
-
-  // Exported permission: administer shortcuts.
-  $permissions['administer shortcuts'] = array(
-    'name' => 'administer shortcuts',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'shortcut',
   );
 
   // Exported permission: administer site configuration.
@@ -664,17 +648,6 @@ function campus_permissions_user_default_permissions() {
       2 => 'moderator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: customize shortcut links.
-  $permissions['customize shortcut links'] = array(
-    'name' => 'customize shortcut links',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'content',
-      2 => 'moderator',
-    ),
-    'module' => 'shortcut',
   );
 
   // Exported permission: delete all webform submissions.
@@ -1077,24 +1050,6 @@ function campus_permissions_user_default_permissions() {
     'module' => 'pathauto',
   );
 
-  // Exported permission: oauth authorize any consumers.
-  $permissions['oauth authorize any consumers'] = array(
-    'name' => 'oauth authorize any consumers',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'oauth_common',
-  );
-
-  // Exported permission: oauth register any consumers.
-  $permissions['oauth register any consumers'] = array(
-    'name' => 'oauth register any consumers',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'oauth_common',
-  );
-
   // Exported permission: opt-in or out of tracking.
   $permissions['opt-in or out of tracking'] = array(
     'name' => 'opt-in or out of tracking',
@@ -1133,15 +1088,6 @@ function campus_permissions_user_default_permissions() {
       1 => 'content',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: switch shortcut sets.
-  $permissions['switch shortcut sets'] = array(
-    'name' => 'switch shortcut sets',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'shortcut',
   );
 
   // Exported permission: use PHP for settings.

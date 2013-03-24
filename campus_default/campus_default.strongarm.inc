@@ -20,34 +20,6 @@ function campus_default_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_college';
-  $strongarm->value = 'edit-menu';
-  $export['additional_settings__active_tab_college'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_event';
-  $strongarm->value = 'edit-menu';
-  $export['additional_settings__active_tab_event'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_ministry';
-  $strongarm->value = 'edit-menu';
-  $export['additional_settings__active_tab_ministry'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_video';
-  $strongarm->value = 'edit-menu';
-  $export['additional_settings__active_tab_video'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'admin_theme';
   $strongarm->value = 'seven';
   $export['admin_theme'] = $strongarm;
@@ -770,6 +742,13 @@ user/*/*';
   $strongarm->name = 'site_frontpage';
   $strongarm->value = 'home';
   $export['site_frontpage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_mail';
+  $strongarm->value = 'contact@chau.drupal.vc';
+  $export['site_mail'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2094,6 +2073,13 @@ foo
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'themekey_ui_nodeform|article';
+  $strongarm->value = 1;
+  $export['themekey_ui_nodeform|article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'themekey_ui_nodeform|blog';
   $strongarm->value = 1;
   $export['themekey_ui_nodeform|blog'] = $strongarm;
@@ -2132,6 +2118,13 @@ foo
   $strongarm->name = 'themekey_ui_nodeform|ministry';
   $strongarm->value = 1;
   $export['themekey_ui_nodeform|ministry'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'themekey_ui_nodeform|page';
+  $strongarm->value = 1;
+  $export['themekey_ui_nodeform|page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -2960,13 +2953,6 @@ foo
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'user_admin_role';
-  $strongarm->value = '3';
-  $export['user_admin_role'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'vc_dashboard_facebook_app_id';
   $strongarm->value = '429990700387982';
   $export['vc_dashboard_facebook_app_id'] = $strongarm;
@@ -3003,6 +2989,15 @@ foo
     ),
   );
   $export['webform_blocks'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'webform_node_types';
+  $strongarm->value = array(
+    0 => 'webform',
+  );
+  $export['webform_node_types'] = $strongarm;
 
   return $export;
 }

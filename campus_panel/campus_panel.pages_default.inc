@@ -619,18 +619,7 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'campus';
   $page->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 2,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array();
@@ -799,18 +788,7 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'college';
   $page->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 2,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array();
@@ -1598,18 +1576,7 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'events';
   $page->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 2,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array();
@@ -1899,18 +1866,7 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'group';
   $page->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 2,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array();
@@ -2705,6 +2661,125 @@ function campus_panel_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
+  $page->name = 'inlfu_global_home_page';
+  $page->task = 'page';
+  $page->admin_title = 'Inlfu Global Home Page';
+  $page->admin_description = '';
+  $page->path = 'global_home';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_inlfu_global_home_page_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'inlfu_global_home_page';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Global Home',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Homepage';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-58';
+    $pane->panel = 'middle';
+    $pane->type = 'views';
+    $pane->subtype = 'global_home';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '5',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-58'] = $pane;
+    $display->panels['middle'][0] = 'new-58';
+    $pane = new stdClass();
+    $pane->pid = 'new-59';
+    $pane->panel = 'middle';
+    $pane->type = 'views';
+    $pane->subtype = 'global_home';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '5',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-59'] = $pane;
+    $display->panels['middle'][1] = 'new-59';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['inlfu_global_home_page'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
   $page->name = 'join_a_group_page';
   $page->task = 'page';
   $page->admin_title = 'Join a Group Page';
@@ -2754,7 +2829,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-58';
+    $pane->pid = 'new-60';
     $pane->panel = 'left';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'fpid:26';
@@ -2771,10 +2846,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-58'] = $pane;
-    $display->panels['left'][0] = 'new-58';
+    $display->content['new-60'] = $pane;
+    $display->panels['left'][0] = 'new-60';
     $pane = new stdClass();
-    $pane->pid = 'new-59';
+    $pane->pid = 'new-61';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-current_active_footer_menu';
@@ -2795,10 +2870,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-59'] = $pane;
-    $display->panels['right'][0] = 'new-59';
+    $display->content['new-61'] = $pane;
+    $display->panels['right'][0] = 'new-61';
     $pane = new stdClass();
-    $pane->pid = 'new-60';
+    $pane->pid = 'new-62';
     $pane->panel = 'top';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
@@ -2828,8 +2903,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-60'] = $pane;
-    $display->panels['top'][0] = 'new-60';
+    $display->content['new-62'] = $pane;
+    $display->panels['top'][0] = 'new-62';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2887,7 +2962,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-61';
+    $pane->pid = 'new-63';
     $pane->panel = 'left';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'fpid:17';
@@ -2904,10 +2979,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-61'] = $pane;
-    $display->panels['left'][0] = 'new-61';
+    $display->content['new-63'] = $pane;
+    $display->panels['left'][0] = 'new-63';
     $pane = new stdClass();
-    $pane->pid = 'new-62';
+    $pane->pid = 'new-64';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-current_active_main_menu';
@@ -2928,10 +3003,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-62'] = $pane;
-    $display->panels['right'][0] = 'new-62';
+    $display->content['new-64'] = $pane;
+    $display->panels['right'][0] = 'new-64';
     $pane = new stdClass();
-    $pane->pid = 'new-63';
+    $pane->pid = 'new-65';
     $pane->panel = 'top';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
@@ -2961,8 +3036,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-63'] = $pane;
-    $display->panels['top'][0] = 'new-63';
+    $display->content['new-65'] = $pane;
+    $display->panels['top'][0] = 'new-65';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3024,7 +3099,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-64';
+    $pane->pid = 'new-66';
     $pane->panel = 'left';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'fpid:13';
@@ -3041,10 +3116,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-64'] = $pane;
-    $display->panels['left'][0] = 'new-64';
+    $display->content['new-66'] = $pane;
+    $display->panels['left'][0] = 'new-66';
     $pane = new stdClass();
-    $pane->pid = 'new-65';
+    $pane->pid = 'new-67';
     $pane->panel = 'left';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -3069,10 +3144,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-65'] = $pane;
-    $display->panels['left'][1] = 'new-65';
+    $display->content['new-67'] = $pane;
+    $display->panels['left'][1] = 'new-67';
     $pane = new stdClass();
-    $pane->pid = 'new-66';
+    $pane->pid = 'new-68';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-current_active_main_menu';
@@ -3093,8 +3168,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-66'] = $pane;
-    $display->panels['right'][0] = 'new-66';
+    $display->content['new-68'] = $pane;
+    $display->panels['right'][0] = 'new-68';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3153,7 +3228,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-67';
+    $pane->pid = 'new-69';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'vc_remote_view-global_privacy_policy_block';
@@ -3171,10 +3246,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-67'] = $pane;
-    $display->panels['left'][0] = 'new-67';
+    $display->content['new-69'] = $pane;
+    $display->panels['left'][0] = 'new-69';
     $pane = new stdClass();
-    $pane->pid = 'new-68';
+    $pane->pid = 'new-70';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-current_active_copyright_menu';
@@ -3195,10 +3270,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-68'] = $pane;
-    $display->panels['right'][0] = 'new-68';
+    $display->content['new-70'] = $pane;
+    $display->panels['right'][0] = 'new-70';
     $pane = new stdClass();
-    $pane->pid = 'new-69';
+    $pane->pid = 'new-71';
     $pane->panel = 'top';
     $pane->type = 'block';
     $pane->subtype = 'vc_remote_view-global_policy_banner';
@@ -3216,8 +3291,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-69'] = $pane;
-    $display->panels['top'][0] = 'new-69';
+    $display->content['new-71'] = $pane;
+    $display->panels['top'][0] = 'new-71';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3233,18 +3308,7 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'services';
   $page->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 2,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array();
@@ -3290,7 +3354,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-70';
+    $pane->pid = 'new-72';
     $pane->panel = 'left';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'fpid:11';
@@ -3307,10 +3371,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-70'] = $pane;
-    $display->panels['left'][0] = 'new-70';
+    $display->content['new-72'] = $pane;
+    $display->panels['left'][0] = 'new-72';
     $pane = new stdClass();
-    $pane->pid = 'new-71';
+    $pane->pid = 'new-73';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-current_active_main_menu';
@@ -3331,10 +3395,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-71'] = $pane;
-    $display->panels['right'][0] = 'new-71';
+    $display->content['new-73'] = $pane;
+    $display->panels['right'][0] = 'new-73';
     $pane = new stdClass();
-    $pane->pid = 'new-72';
+    $pane->pid = 'new-74';
     $pane->panel = 'top';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
@@ -3364,8 +3428,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-72'] = $pane;
-    $display->panels['top'][0] = 'new-72';
+    $display->content['new-74'] = $pane;
+    $display->panels['top'][0] = 'new-74';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3423,7 +3487,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-73';
+    $pane->pid = 'new-75';
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
@@ -3453,10 +3517,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-73'] = $pane;
-    $display->panels['middle'][0] = 'new-73';
+    $display->content['new-75'] = $pane;
+    $display->panels['middle'][0] = 'new-75';
     $pane = new stdClass();
-    $pane->pid = 'new-74';
+    $pane->pid = 'new-76';
     $pane->panel = 'middle';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'fpid:15';
@@ -3473,8 +3537,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-74'] = $pane;
-    $display->panels['middle'][1] = 'new-74';
+    $display->content['new-76'] = $pane;
+    $display->panels['middle'][1] = 'new-76';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3533,7 +3597,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-75';
+    $pane->pid = 'new-77';
     $pane->panel = 'left';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'fpid:25';
@@ -3550,10 +3614,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-75'] = $pane;
-    $display->panels['left'][0] = 'new-75';
+    $display->content['new-77'] = $pane;
+    $display->panels['left'][0] = 'new-77';
     $pane = new stdClass();
-    $pane->pid = 'new-76';
+    $pane->pid = 'new-78';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-current_active_main_menu';
@@ -3574,10 +3638,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-76'] = $pane;
-    $display->panels['right'][0] = 'new-76';
+    $display->content['new-78'] = $pane;
+    $display->panels['right'][0] = 'new-78';
     $pane = new stdClass();
-    $pane->pid = 'new-77';
+    $pane->pid = 'new-79';
     $pane->panel = 'top';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
@@ -3607,8 +3671,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-77'] = $pane;
-    $display->panels['top'][0] = 'new-77';
+    $display->content['new-79'] = $pane;
+    $display->panels['top'][0] = 'new-79';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3624,18 +3688,7 @@ function campus_panel_default_page_manager_pages() {
   $page->admin_description = '';
   $page->path = 'team';
   $page->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 2,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array();
@@ -3677,7 +3730,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-78';
+    $pane->pid = 'new-80';
     $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
@@ -3707,10 +3760,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-78'] = $pane;
-    $display->panels['center'][0] = 'new-78';
+    $display->content['new-80'] = $pane;
+    $display->panels['center'][0] = 'new-80';
     $pane = new stdClass();
-    $pane->pid = 'new-79';
+    $pane->pid = 'new-81';
     $pane->panel = 'center';
     $pane->type = 'block';
     $pane->subtype = 'vc_remote_view-global_team_block';
@@ -3728,10 +3781,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-79'] = $pane;
-    $display->panels['center'][1] = 'new-79';
+    $display->content['new-81'] = $pane;
+    $display->panels['center'][1] = 'new-81';
     $pane = new stdClass();
-    $pane->pid = 'new-80';
+    $pane->pid = 'new-82';
     $pane->panel = 'center';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-campus_team_page_title';
@@ -3749,10 +3802,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-80'] = $pane;
-    $display->panels['center'][2] = 'new-80';
+    $display->content['new-82'] = $pane;
+    $display->panels['center'][2] = 'new-82';
     $pane = new stdClass();
-    $pane->pid = 'new-81';
+    $pane->pid = 'new-83';
     $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'team_views';
@@ -3782,8 +3835,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-81'] = $pane;
-    $display->panels['center'][3] = 'new-81';
+    $display->content['new-83'] = $pane;
+    $display->panels['center'][3] = 'new-83';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3842,7 +3895,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-82';
+    $pane->pid = 'new-84';
     $pane->panel = 'middle';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -3872,8 +3925,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-82'] = $pane;
-    $display->panels['middle'][0] = 'new-82';
+    $display->content['new-84'] = $pane;
+    $display->panels['middle'][0] = 'new-84';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -3931,7 +3984,7 @@ function campus_panel_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-83';
+    $pane->pid = 'new-85';
     $pane->panel = 'left';
     $pane->type = 'fieldable_panels_pane';
     $pane->subtype = 'fpid:20';
@@ -3948,10 +4001,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-83'] = $pane;
-    $display->panels['left'][0] = 'new-83';
+    $display->content['new-85'] = $pane;
+    $display->panels['left'][0] = 'new-85';
     $pane = new stdClass();
-    $pane->pid = 'new-84';
+    $pane->pid = 'new-86';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'vc_content-current_active_main_menu';
@@ -3972,10 +4025,10 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-84'] = $pane;
-    $display->panels['right'][0] = 'new-84';
+    $display->content['new-86'] = $pane;
+    $display->panels['right'][0] = 'new-86';
     $pane = new stdClass();
-    $pane->pid = 'new-85';
+    $pane->pid = 'new-87';
     $pane->panel = 'top';
     $pane->type = 'views';
     $pane->subtype = 'influ_pages_header';
@@ -4005,8 +4058,8 @@ function campus_panel_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-85'] = $pane;
-    $display->panels['top'][0] = 'new-85';
+    $display->content['new-87'] = $pane;
+    $display->panels['top'][0] = 'new-87';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
