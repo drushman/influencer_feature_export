@@ -76,7 +76,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'access google analytics reports',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'google_analytics_reports',
   );
@@ -117,7 +118,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'system',
   );
@@ -127,7 +129,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'user',
   );
@@ -137,7 +140,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'add media from remote sources',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'media_internet',
   );
@@ -219,7 +223,6 @@ function campus_permissions_user_default_permissions() {
     'name' => 'administer fieldable panels panes',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -283,6 +286,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'menu',
   );
@@ -311,6 +316,7 @@ function campus_permissions_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -419,7 +425,6 @@ function campus_permissions_user_default_permissions() {
     'name' => 'administer site configuration',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
     ),
     'module' => 'system',
   );
@@ -484,6 +489,7 @@ function campus_permissions_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'user',
   );
@@ -579,6 +585,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'user',
   );
@@ -630,6 +638,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'path',
   );
@@ -639,7 +649,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'create video content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -660,6 +671,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'customize shortcut links',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'shortcut',
   );
@@ -724,7 +737,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'delete any webform content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -787,7 +801,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'delete own webform content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'node',
   );
@@ -830,6 +845,7 @@ function campus_permissions_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'profile2',
   );
@@ -862,6 +878,7 @@ function campus_permissions_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'profile2',
   );
@@ -915,7 +932,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'edit media',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'media',
   );
@@ -925,6 +943,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'edit meta tags',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'metatag',
   );
@@ -945,6 +965,7 @@ function campus_permissions_user_default_permissions() {
       0 => 'adelaide',
       1 => 'administrator',
       2 => 'content',
+      3 => 'moderator',
     ),
     'module' => 'profile2',
   );
@@ -978,6 +999,7 @@ function campus_permissions_user_default_permissions() {
       0 => 'administrator',
       1 => 'content',
       2 => 'global',
+      3 => 'moderator',
     ),
     'module' => 'profile2',
   );
@@ -1031,7 +1053,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'import media',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'media',
   );
@@ -1096,6 +1119,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'search content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'search',
   );
@@ -1142,6 +1167,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'use advanced search',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'search',
   );
@@ -1207,7 +1234,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'filter',
   );
@@ -1217,6 +1245,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'use text format php_code',
     'roles' => array(
       0 => 'administrator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'filter',
   );
@@ -1227,6 +1257,7 @@ function campus_permissions_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'profile2',
   );
@@ -1237,6 +1268,7 @@ function campus_permissions_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'profile2',
   );
@@ -1260,6 +1292,7 @@ function campus_permissions_user_default_permissions() {
       0 => 'adelaide',
       1 => 'administrator',
       2 => 'content',
+      3 => 'moderator',
     ),
     'module' => 'profile2',
   );
@@ -1271,6 +1304,7 @@ function campus_permissions_user_default_permissions() {
       0 => 'administrator',
       1 => 'content',
       2 => 'global',
+      3 => 'moderator',
     ),
     'module' => 'profile2',
   );
@@ -1280,7 +1314,8 @@ function campus_permissions_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'moderator',
+      1 => 'content',
+      2 => 'moderator',
     ),
     'module' => 'node',
   );

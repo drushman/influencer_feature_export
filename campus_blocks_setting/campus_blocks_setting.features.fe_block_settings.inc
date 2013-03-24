@@ -315,10 +315,7 @@ vc/site_settings',
     'delta' => 'dashboard_menu_tool',
     'module' => 'vc_admin',
     'node_types' => array(),
-    'pages' => 'vc/*
-admin/structure/fieldable-panels-panes/view/*
-node/*
-user/*',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'admintheme' => array(
@@ -347,7 +344,7 @@ user/*',
       ),
     ),
     'title' => '',
-    'visibility' => '1',
+    'visibility' => '0',
   );
 
   $export['vc_admin-dashboard_user_tool'] = array(
