@@ -10,17 +10,6 @@
 function campus_permissions_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access administration menu.
-  $permissions['access administration menu'] = array(
-    'name' => 'access administration menu',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'content',
-      2 => 'moderator',
-    ),
-    'module' => 'admin_menu',
-  );
-
   // Exported permission: access administration pages.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
