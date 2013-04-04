@@ -385,7 +385,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'About Influencer Church';
+  $display->title = variable_get('page_title_about','About Influencer Church');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -515,7 +515,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Be an Influencer';
+  $display->title = variable_get('page_title_be_an_influencer','Be an Influencer');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -657,7 +657,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Church Life';
+  $display->title = variable_get('page_title_campus_church_life_page', 'Church Life');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -826,7 +826,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'College';
+  $display->title = variable_get('page_title_college', 'College');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -972,7 +972,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Concierge';
+  $display->title = variable_get('page_title_concierge_page', 'Concierge');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -1187,7 +1187,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Contact';
+  $display->title = variable_get('page_title_contact_page', 'Contact');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -1324,7 +1324,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Devotions online';
+  $display->title = variable_get('page_title_devotions_online', 'Devotions online');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -1492,7 +1492,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Disclaimer';
+  $display->title = variable_get('page_title_disclaimer', 'Disclaimer');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -1614,7 +1614,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Events';
+  $display->title = variable_get('page_title_events_listing', 'Events');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -1781,7 +1781,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Online giving';
+  $display->title = variable_get('page_title_give', 'Online giving');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -1908,7 +1908,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Group';
+  $display->title = variable_get('page_title_group_page', 'Group');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -2097,7 +2097,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Highlights';
+  $display->title = variable_get('page_title_highlights_page', 'Highlights');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -2410,7 +2410,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'I\'m new';
+  $display->title = variable_get('page_title_im_new', 'I\'m new');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -2567,7 +2567,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Influencers live';
+  $display->title = variable_get('page_title_influencers_live', 'Influencers live');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -2702,7 +2702,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Homepage';
+  $display->title = 'Global Homepage';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -2825,7 +2825,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Join a group';
+  $display->title = variable_get('page_title_join_a_group_page', 'Join a group');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -2958,7 +2958,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Location';
+  $display->title = variable_get('page_title_location', 'Location');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -3095,7 +3095,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Podcasts';
+  $display->title = variable_get('page_title_podcasts', 'Podcasts');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -3224,7 +3224,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Privacy Policy';
+  $display->title = variable_get('page_title_privacy_policy_page', 'Privacy Policy');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -3350,7 +3350,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Services';
+  $display->title = variable_get('page_title_services', 'Services');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -3483,7 +3483,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Store';
+  $display->title = variable_get('page_title_store', 'Store');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -3593,7 +3593,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Streaming Help';
+  $display->title = variable_get('page_title_streaming_help_page', 'Streaming Help');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -3726,7 +3726,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Leadership Team';
+  $display->title = variable_get('page_title_team_page', 'Leadership Team');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -3980,7 +3980,7 @@ function campus_panel_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Vision';
+  $display->title = variable_get('page_title_vision', 'Vision');
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
